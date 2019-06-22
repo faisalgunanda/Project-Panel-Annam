@@ -1,0 +1,2064 @@
+<!--Design by designlayout-->
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--Start HTML document-->
+
+<!DOCTYPE html>
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--HTML-->
+<html lang="en">
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--Head-->
+
+
+<!-- Mirrored from vuelayout.com/efnify/html/chartjs-charts.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Feb 2019 03:06:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Page title-->
+    <title>ChartJS - Efnify</title>
+
+    <!--Browser navbar color (#5c6bc0: indigo lighten-1) for mobile-->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#5c6bc0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#5c6bc0">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5c6bc0">
+    <!--Favicon icon-->
+    <link href="../assets/images/favicon.png" type="image/png" rel="icon">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- ================================================
+    CSS
+    ================================================ -->
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css" />
+    <!-- Import prismjs (syntex highlighter) -->
+    <link type="text/css" rel="stylesheet" href="../node_modules/prismjs/themes/prism.css" />
+    <!-- Import Efnify app css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/app.css" />
+    <!-- Import Efnify app helper class css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/helper.css" />
+    <!-- Import Efnify app responsive css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/responsive.css" />
+    <!-- Import Efnify app theme css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/theme/default.css" />
+
+
+</head>
+<!-- End head-->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--body-->
+
+<body>
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!--Efnify body-->
+    <div class="ui-app">
+
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+        <!--Efnify body page wrapper -->
+        <div class="ui-app__wrapper" id="app-layout-control">
+
+            <!-- ////////////////s//////////////////////////////////////////////////////////// -->
+            <!--prepage loader-->
+            <div id="prepage-loader">
+                <div class="ui-app__prepage-loader spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+            <!-- End prepage loader-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- /////////////////////////////////////////////////////////////////// -->
+            <!--navbar/header-->
+            <div class="navbar-fixed">
+                <nav class="ui-app__wrapper__navbar">
+                    <div class="nav-wrapper">
+
+                        <!-- //////////////////////////////////////////////////////// -->
+                        <!-- navbar left side  -->
+                        <div class="ui-app__wrapper__navbar__leftside--icons">
+
+                            <!-- left sidenav toggle button(show and hide sidenav) -->
+                            <div class="left ui-app__wrapper__navbar__leftside--icons__sidenav--toggle ui-app__wrapper__navbar__leftside--icon__item" data-target="ui-app__left-sidenav-slide-out" id="left-sidenav-toggle">
+                                <i class="material-icons">menu</i>
+                            </div>
+
+                            <!-- Efnify app/brand title -->
+                            <a href="dashboard.html" class="brand-logo ui-app__wrapper__navbar__leftside--icon__item">Efnify</a>
+
+                            <!-- left sidenav toggle button(small and large sidenav) -->
+                            <div class="ui-app__wrapper__navbar__leftside--icons__sidenav-small--toggle hide-on-med-and-down ui-app__wrapper__navbar__leftside--icon__item" id="left-sidenav-small-toggle">
+                                <i class="material-icons">radio_button_checked</i>
+                            </div>
+                        </div>
+                        <!-- End navbar left side  -->
+                        <!-- ///////////////////////////////////////////////////////////////// -->
+
+                        <!--Search box-->
+                        <!-- ////////////////////////////////////////////////////////////// -->
+                        <div class="ui-app__wrapper__navbar__leftside__search hide-on-med-and-down">
+                            <!-- Search form -->
+                            <form action="#">
+                                <div class="input-field">
+                                    <!--Search input-->
+                                    <input id="search" type="search" autocomplete="off" placeholder="Search pages here!">
+                                    <!--End Search input-->
+                                    <!--Search icon-->
+                                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                    <!--End Search icon-->
+
+
+
+                                </div>
+                            </form>
+                            <!-- End Search form -->
+                        </div>
+                        <!--End Search box-->
+                        <!-- ////////////////////////////////////////////////////////////////// -->
+
+                        <!-- ////////////////////////////////////////////////////////////////// -->
+                        <!-- navbar right side  -->
+                        <div class="ui-app__wrapper__navbar__rightside--icons right">
+                            <!-- navbar menu list -->
+                            <ul>
+                                <!-- full menu demo -->
+                                <li class="ui-app__wrapper__navbar__rightside--icons__item hide-on-small-only"><a class="btn btn-depressed dropdown-trigger dropdown-fixed-width" href="#!" data-target="dropdown-full-menu-target"><i class="material-icons white-text right">arrow_drop_down</i> full menu </a></li>
+                                <!-- End full menu demo -->
+                                <!-- refresh/reload page button -->
+                                <li class="ui-app__wrapper__navbar__rightside--icons__item hide-on-small-only" id="app-page-refresh"><i class="material-icons">refresh</i></li>
+
+                                <!-- notification list -->
+                                <li class="ui-app__wrapper__navbar__rightside--icons__item ui-app__wrapper__navbar__rightside--notifications notification-badge" data-target='dropdown-notifications-target' data-notifications="4"><i class="material-icons">notifications</i></li>
+
+
+                                <!-- User profile -->
+                                <li class="ui-app__wrapper__navbar__rightside--users ui-app__wrapper__navbar__rightside--icons__item" data-target="dropdown-user-profile-target">
+                                    M
+                                </li>
+
+                            </ul>
+                            <!-- full menu dropdown structure -->
+                            <div id="dropdown-full-menu-target" class="dropdown-content dropdown-full-width ui-app__wrapper__navbar__rightside--full-menu__dropdown ">
+                                <div class="row p-a-15">
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Material UI</div>
+                                        <ul>
+                                            <li><a href="#!">Buttons</a></li>
+                                            <li><a href="#!">Badges</a></li>
+                                            <li><a href="#!">Breadcrumbs</a></li>
+                                            <li><a href="#!">Collections</a></li>
+                                            <li><a href="#!">Collapsibles</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">CSS</div>
+                                        <ul>
+                                            <li><a href="#!">Typography</a></li>
+                                            <li><a href="#!">Icons</a></li>
+                                            <li><a href="#!">Animations</a></li>
+                                            <li><a href="#!">Shadow</a></li>
+                                            <li><a href="#!">Media</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Advanced UI</div>
+                                        <ul>
+                                            <li><a href="#!">Carousel</a></li>
+                                            <li><a href="#!">Range Slider</a></li>
+                                            <li><a href="#!">SweetAlert</a></li>
+                                            <li><a href="#!">Highlight</a></li>
+                                            <li><a href="#!">Cards</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Forms</div>
+                                        <ul>
+                                            <li><a href="#!">Form Layouts</a></li>
+                                            <li><a href="#!">Form Validations</a></li>
+                                            <li><a href="#!">Form Masks</a></li>
+                                            <li><a href="#!">Text Editor</a></li>
+                                            <li><a href="#!">Form Elements</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Home</div>
+                                        <ul>
+                                            <li><a href="#!">Signup</a></li>
+                                            <li><a href="#!">Change Password</a></li>
+                                            <li><a href="#!">Contactus</a></li>
+                                            <li><a href="#!">Blank Page</a></li>
+                                            <li><a href="#!">Reset</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Elements</div>
+                                        <ul>
+                                            <li><a href="#!">Grid</a></li>
+                                            <li><a href="#!">Color</a></li>
+                                            <li><a href="#!">widgets</a></li>
+                                            <li><a href="#!">Helpers</a></li>
+                                            <li><a href="#!">Search Page</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End full menu dropdown structure -->
+
+                            <!-- User profile dropdown structure -->
+                            <div id="dropdown-user-profile-target" class="ui-app__wrapper__navbar__rightside--users__dropdown dropdown-content">
+                                <ul>
+                                    <li><a href="#!"><i class="material-icons">perm_identity</i>My Profile</a></li>
+                                    <li><a href="javascript:void(0)" class="toggle-right-sidenav"><i class="material-icons">settings</i>Page Customizer</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="lock.html"><i class="material-icons">lock</i>Lock</a></li>
+                                    <li><a href="signup.html"><i class="material-icons">power_settings_new</i>Logout</a></li>
+                                </ul>
+                            </div>
+                            <!-- End user profile dropdown structure -->
+                            <!-- Notifications dropdown structure -->
+                            <div id="dropdown-notifications-target" class="ui-app__wrapper__navbar__rightside--notifications__dropdown dropdown-content">
+                                <ul class="collection">
+                                    <li class="collection-item avatar"> <img src="../assets/images/user1.jpg" alt="user profile picture" class="circle"> <span class="title">Brunch this weekend?</span>
+                                        <p>Ali Connors <span class="body-1">&mdash; I'll be in your neighborhood doing errands this weekend.</span></p>
+                                    </li>
+                                    <li class="collection-item avatar"> <img src="../assets/images/user2.jpg" alt="user profile picture" class="circle"> <span class="title">Oui oui</span>
+                                        <p>Sandra Adams <span class="body-1">&mdash; Do you have Paris recommendations? Have you ever been?</span></p>
+                                    </li>
+                                    <li class="collection-item avatar"> <img src="../assets/images/user3.jpg" alt="user profile picture" class="circle"> <span class="title">Birthday gift</span>
+                                        <p>Trevor Hansen <span class="body-1">&mdash; Have any ideas about what we should get Heidi for her birthday?</span></p>
+                                    </li>
+                                    <li class="collection-item avatar"> <img src="../assets/images/user4.jpg" alt="user profile picture" class="circle"> <span class="title">Recipe to try</span>
+                                        <p>Britta Holt <span class="body-1">&mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.</span></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End notifications dropdown structure -->
+
+                        </div>
+                        <!-- End navbar left side  -->
+                        <!-- ////////////////////////////////////////////////////////// -->
+                    </div>
+
+                </nav>
+            </div>
+            <!--End navbar/header-->
+            <!-- //////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Left sidenav/sidebar-->
+            <aside class="ui-app__left-sidenav sidenav sidenav-fixed" id="ui-app__left-sidenav-slide-out">
+
+                <!-- sidenav menu list -->
+                <ul class="no-margin">
+                    <!-- dashboard menu -->
+                    <li>
+                        <a href="dashboard.html" class="waves-effect waves-light btn btn-rounded btn-dashboard"><i class="material-icons left">dashboard</i>Dashboard</a>
+                    </li>
+                    <!--end  dashboard menu -->
+
+                    <!-- sidenav main menu list -->
+                    <li>
+                        <ul class="ui-app__left-sidenav__menu collapsible collapsible-accordion ui-app__scrollbar">
+                            <li>
+
+                                <a class="collapsible-header waves-effect waves-default"><i class="material-icons left">build</i>Material UI<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="button.html" class="waves-effect waves-default">Button</a></li>
+                                        <li><a href="floating-action-button.html" class="waves-effect waves-default">Floating Action Button</a></li>
+                                        <li><a href="breadcrumbs.html" class="waves-effect waves-default">Breadcrumbs</a></li>
+                                        <li><a href="collections.html" class="waves-effect waves-default">Collections</a></li>
+                                        <li><a href="collapsibles.html" class="waves-effect waves-default">Collapsibles</a></li>
+                                        <li><a href="dropdown.html" class="waves-effect waves-default">Dropdown</a></li>
+                                        <li><a href="tabs.html" class="waves-effect waves-default">Tabs</a></li>
+                                        <li><a href="pagination.html" class="waves-effect waves-default">Pagination</a></li>
+                                        <li><a href="preloader.html" class="waves-effect waves-default">Preloader</a></li>
+                                        <li><a href="toasts.html" class="waves-effect waves-default">Toasts</a></li>
+                                        <li><a href="tooltip.html" class="waves-effect waves-default">Tooltip</a></li>
+                                        <li><a href="waves.html" class="waves-effect waves-default">Waves</a></li>
+                                        <li><a href="typography.html" class="waves-effect waves-default">Typography</a></li>
+                                        <li><a href="icons.html" class="waves-effect waves-default">Icons</a></li>
+                                        <li><a href="animations.html" class="waves-effect waves-default">Animations</a></li>
+                                        <li><a href="shadow.html" class="waves-effect waves-default">Shadow</a></li>
+                                        <li><a href="media.html" class="waves-effect waves-default">Media</a></li>
+                                        <li><a href="css-transitions.html" class="waves-effect waves-default">CSS Transitions</a></li>
+                                        <li><a href="pulse.html" class="waves-effect waves-default">Pulse</a></li>
+                                        <li><a href="feature-discovery.html" class="waves-effect waves-default">FeatureDiscovery</a></li>
+                                        <li><a href="media-js.html" class="waves-effect waves-default">Media JavaScript</a></li>
+
+                                        <li><a href="cards.html" class="waves-effect waves-default">Cards</a></li>
+                                        <li><a href="carousel.html" class="waves-effect waves-default">Carousel</a></li>
+                                        <li><a href="modals.html" class="waves-effect waves-default">Modals</a></li>
+                                        <li><a href="range-slider.html" class="waves-effect waves-default">Range Slider</a></li>
+                                        <li><a href="sweetalert.html" class="waves-effect waves-default">SweetAlert</a></li>
+                                        <li><a href="highlight.html" class="waves-effect waves-default">Highlight</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="active">
+                                <a class="collapsible-header"><i class="material-icons left">insert_chart</i>Charts<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+
+
+                                        <li class="active"><a href="chartjs-charts.html" class="waves-effect waves-default">ChartJS</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">message</i>Forms<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+
+                                        <li><a href="autocomplete.html" class="waves-effect waves-default">Autocomplete</a></li>
+                                        <li><a href="checkboxes.html" class="waves-effect waves-default">Checkboxes</a></li>
+                                        <li><a href="chips.html" class="waves-effect waves-default">Chips</a></li>
+                                        <li><a href="pickers.html" class="waves-effect waves-default">Pickers</a></li>
+                                        <li><a href="radio-buttons.html" class="waves-effect waves-default">Radio Buttons</a></li>
+                                        <li><a href="range.html" class="waves-effect waves-default">Range</a></li>
+                                        <li><a href="select.html" class="waves-effect waves-default">Select</a></li>
+                                        <li><a href="switches.html" class="waves-effect waves-default">Switches</a></li>
+                                        <li><a href="text-inputs.html" class="waves-effect waves-default">Text Inputs</a></li>
+                                        <li><a href="form-layouts.html" class="waves-effect waves-default">Form Layouts</a></li>
+
+
+                                        <li><a href="text-editor.html" class="waves-effect waves-default">Text Editor</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">border_all</i>Tables<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="basic-table.html" class="waves-effect waves-default">Basic Tables</a></li>
+                                        <li><a href="data-table.html" class="waves-effect waves-default">Data Tables</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">terrain</i>Pages<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="login.html" class="waves-effect waves-default">Login</a></li>
+                                        <li><a href="signup.html" class="waves-effect waves-default">Signup</a></li>
+                                        <li><a href="reset.html" class="waves-effect waves-default">Reset</a></li>
+                                        <li><a href="lock.html" class="waves-effect waves-default">Lock</a></li>
+                                        <li><a href="change-password.html" class="waves-effect waves-default">Change Password</a></li>
+                                        <li><a href="contactus.html" class="waves-effect waves-default">Contactus</a></li>
+                                        <li><a href="blank.html" class="waves-effect waves-default">Blank Page</a></li>
+
+
+                                        <li><a href="404.html" class="waves-effect waves-default">404</a></li>
+                                        <li><a href="500.html" class="waves-effect waves-default">500</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="no-menu-list">
+                                <a href="grid.html" class="collapsible-header"><i class="material-icons left">grid_on</i>Grid</a>
+                                <div class="collapsible-body">
+                                </div>
+                            </li>
+
+                            <li class="no-menu-list">
+                                <a href="color.html" class="collapsible-header"><i class="material-icons left">format_color_fill</i>Color</a>
+                                <div class="collapsible-body">
+                                </div>
+                            </li>
+
+                            <li class="no-menu-list">
+                                <a href="helpers.html" class="collapsible-header"><i class="material-icons left">live_help</i>Helper class</a>
+                                <div class="collapsible-body">
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                    <!--end sidenav main menu list -->
+
+                    <!-- sidenav quick/sub main menu list -->
+                    <li class="ui-app__left-sidenav__collapsible-quick-menu-name">
+                        Quick Link
+                    </li>
+                    <li>
+                        <ul class="ui-app__left-sidenav__collapsible-quick-menu ui-app__scrollbar">
+                            <li><a href="#!"><i class="material-icons">help</i>Help</a></li>
+                            <li><a href="#!"><i class="material-icons">phone</i>Contact Support</a></li>
+                            <li><a href="#!"><i class="material-icons">email</i>Email Support</a></li>
+                            <li><a href="#!"><i class="material-icons">code</i>API Documentation</a></li>
+                        </ul>
+                    </li>
+                    <!-- end sidenav quick/sub main menu list -->
+                </ul>
+                <!-- end sidenav menu list -->
+            </aside>
+            <!--End Left sidenav/sidebar-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Right sidenav/sidebar-->
+            <aside class="ui-app__right-sidenav sidenav ui-app__scrollbar" id="ui-app__right-sidenav-slide-out">
+
+                <!-- Layout options -->
+                <ul class="ui-app__right-sidenav__layout">
+                    <li>
+                        <h6 class="settings-content-title">Layout Options</h6>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="with-gap" name="layout" type="radio" value="fixed-header-sidenav" checked />
+                            <span>Fixed Header and sidenav(Default)</span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <input class="with-gap" name="layout" type="radio" value="fixed-header-unfixed-sidenav"/>
+                            <span>Fixed Header Unfixed sidenav</span>
+                        </label>
+                    </li>
+
+
+                    <li>
+                        <label>
+                            <input class="with-gap" name="layout" type="radio" value="unfixed-header-sidenav"/>
+                            <span>Unfixed Header and sidenav</span>
+                        </label>
+                    </li>
+                </ul>
+                <!-- End Layout options -->
+
+                <!-- color options -->
+                <ul class="ui-app__right-sidenav__layout">
+                    <li>
+                        <h6 class="settings-content-title">Color Options</h6>
+                    </li>
+                    <li>
+                        <div class="ui-app__right-sidenav__layout__color-body active" data-color="default">
+                            <div class="ui-app__right-sidenav__layout__color-body__header indigo">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="pink">
+                            <div class="ui-app__right-sidenav__layout__color-body__header pink">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="purple">
+                            <div class="ui-app__right-sidenav__layout__color-body__header purple">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="blue">
+                            <div class="ui-app__right-sidenav__layout__color-body__header blue">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="cyan">
+                            <div class="ui-app__right-sidenav__layout__color-body__header cyan">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="teal">
+                            <div class="ui-app__right-sidenav__layout__color-body__header teal">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+
+
+                </ul>
+                <!--end  color options -->
+            </aside>
+
+            <!-- Right sidenav toggle (show and hide right sidenav on click button) -->
+            <a href="#" data-target="ui-app__right-sidenav-slide-out" class="ui-app__right-sidenav-toggle sidenav-trigger btn-floating waves-effect waves-light" id="right-sidenav-toggle"><i class="material-icons ">settings</i></a>
+
+            <!--End Right sidenav/sidebar-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Page Body-->
+            <main>
+                <!-- Page heading -->
+                <div class="row ui-app__row">
+                    <div class="col s12 ui-app__header">
+                        <!-- title -->
+                        <h1 class="ui-app__header__title display-1">ChartJS </h1>
+                        <!-- bookmark -->
+                        <a href="http://www.chartjs.org/" target="_blank" class="ui-app__header__bookmark"><i class="material-icons">bookmark</i></a>
+
+                        <!-- sub heading -->
+                        <p class="ui-app__header__body subheading">
+                            Chart.js Simple yet flexible JavaScript charting for designers &amp; developers.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- End page heading -->
+
+                <!-- Page content -->
+                <div class="row">
+
+                    <!--start column-->
+                    <div class="col s12">
+                        <!-- Start Area Chart Card-->
+                        <div class="card ui-app__page-content">
+                            <!--card content-->
+                            <div class="card-content">
+
+                                <!-- //////////////////////////////////////// -->
+                                <!-- Area Chart -->
+
+                                <!--card title-->
+                                <div class="card-title headline">Area Chart</div>
+                                <!--area chart content-->
+                                <div class="card-body">
+
+
+
+                                    <div style="min-height: 375px">
+                                        <canvas id="chartjs-area-chart"></canvas>
+                                    </div>
+
+                                    <!--Area Chart sample code-->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a class="active" href="#cja-sample-code-html">HTML</a></li>
+                                                <li class="tab"><a href="#cja-sample-code-js">JS</a></li>
+                                            </ul>
+
+                                            <div id="cja-sample-code-html">
+                                                <pre>
+                                                    <code class="language-html">
+&lt;div style=&quot;min-height: 375px&quot;&gt;
+    &lt;canvas id=&quot;chartjs-area-chart&quot;&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+
+                                            <div id="cja-sample-code-js">
+                                                <pre>
+                                                    <code class=" language-javascript">
+window.chartColors = {
+red: 'rgb(255, 99, 132)',
+orange: 'rgb(255, 159, 64)',
+yellow: 'rgb(255, 205, 86)',
+green: 'rgb(75, 192, 192)',
+blue: 'rgb(54, 162, 235)',
+purple: 'rgb(153, 102, 255)',
+grey: 'rgb(201, 203, 207)'
+};
+
+window.randomScalingFactor = function() {
+return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+};
+
+var areaConfig = {
+type: 'line',
+data: {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [{
+        label: "My First dataset",
+        backgroundColor: '#ffcccc',
+        borderColor: window.chartColors.red,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ],
+        fill: true,
+    }, {
+        label: "My Second dataset",
+        fill: true,
+        backgroundColor: '#9cb3fc',
+        borderColor: window.chartColors.blue,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ],
+    }]
+},
+options: {
+    responsive: true,                     maintainAspectRatio: false,
+    title: {
+        display: true,
+        text: 'Area Chart'
+    },
+    tooltips: {
+        mode: 'index',
+        intersect: false,
+    },
+    hover: {
+        mode: 'nearest',
+        intersect: true
+    },
+    scales: {
+        xAxes: [{
+            display: true,
+            scaleLabel: {
+                display: true,
+                labelString: 'Month'
+            }
+        }],
+        yAxes: [{
+            display: true,
+            scaleLabel: {
+                display: true,
+                labelString: 'Value'
+            }
+        }]
+    }
+}
+};
+
+// Chart initialize
+var areaCtx = document.getElementById("chartjs-area-chart").getContext("2d");
+window.myArea = new Chart(areaCtx, areaConfig);
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end Area Chart sample code-->
+                                </div>
+                                <!-- End Area Chart -->
+                                <!-- //////////////////////////////////////// -->
+
+                            </div>
+                            <!--end card content-->
+                        </div>
+                        <!--end  Area Chart card-->
+
+
+                        <!-- Start Bar Chart Card-->
+                        <div class="card ui-app__page-content">
+                            <!--card content-->
+                            <div class="card-content">
+
+                                <!-- //////////////////////////////////////// -->
+                                <!-- Bar Chart -->
+
+                                <!--card title-->
+                                <div class="card-title headline">Bar Chart</div>
+                                <div class="card-body">
+                                    <!--Bar chart content-->
+                                    <div style="min-height: 375px"> <canvas id="chartjs-bar-chart"></canvas></div>
+
+                                    <!--Bar Chart sample code-->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a class="active" href="#gb-sample-code-html">HTML</a></li>
+                                                <li class="tab"><a href="#gb-sample-code-js">JS</a></li>
+                                            </ul>
+
+                                            <div id="gb-sample-code-html">
+                                                <pre>
+                                                    <code class="language-html">
+&lt;div style=&quot;min-height: 375px&quot;&gt; &lt;canvas id=&quot;chartjs-bar-chart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+
+                                            <div id="gb-sample-code-js">
+                                                <pre>
+                                                    <code class=" language-javascript">
+window.chartColors = {
+red: 'rgb(255, 99, 132)',
+orange: 'rgb(255, 159, 64)',
+yellow: 'rgb(255, 205, 86)',
+green: 'rgb(75, 192, 192)',
+blue: 'rgb(54, 162, 235)',
+purple: 'rgb(153, 102, 255)',
+grey: 'rgb(201, 203, 207)'
+};
+
+window.randomScalingFactor = function() {
+return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+};
+
+var barConfig = {
+type: 'bar',
+data: {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [{
+        label: 'Dataset 1',
+        backgroundColor: window.chartColors.red,
+        borderColor: window.chartColors.red,
+        borderWidth: 1,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ]
+    }, {
+        label: 'Dataset 2',
+        backgroundColor: window.chartColors.blue,
+        borderColor: window.chartColors.blue,
+        borderWidth: 1,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ]
+    }]
+
+},
+options: {
+    responsive: true,                     maintainAspectRatio: false,
+    title: {
+        display: true,
+        text: 'Bar Chart'
+    },
+    tooltips: {
+        mode: 'index',
+        intersect: false,
+    },
+    hover: {
+        mode: 'nearest',
+        intersect: true
+    },
+    scales: {
+        xAxes: [{
+            display: true,
+            scaleLabel: {
+                display: true,
+                labelString: 'Month'
+            }
+        }],
+        yAxes: [{
+            display: true,
+            scaleLabel: {
+                display: true,
+                labelString: 'Value'
+            }
+        }]
+    }
+}
+};
+
+// chart initialize
+var barCtx = document.getElementById("chartjs-bar-chart").getContext("2d");
+window.mybar = new Chart(barCtx, barConfig);
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end Bar Chart sample code-->
+                                </div>
+                                <!-- End Bar Chart -->
+                                <!-- //////////////////////////////////////// -->
+
+                            </div>
+                            <!--end card content-->
+                        </div>
+                        <!--end  Bar Chart card-->
+
+                        <!-- Start line Chart Card-->
+                        <div class="card ui-app__page-content">
+                            <!--card content-->
+                            <div class="card-content">
+
+                                <!-- //////////////////////////////////////// -->
+                                <!-- line Chart -->
+
+                                <!--card title-->
+                                <div class="card-title headline">Line Chart</div>
+                                <div class="card-body">
+                                    <!--line chart content-->
+                                    <div style="min-height: 375px"> <canvas id="chartjs-line-chart"></canvas></div>
+
+                                    <!--line Chart sample code-->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a class="active" href="#gl-sample-code-html">HTML</a></li>
+                                                <li class="tab"><a href="#gl-sample-code-js">JS</a></li>
+                                            </ul>
+
+                                            <div id="gl-sample-code-html">
+                                                <pre>
+                                                    <code class="language-html">
+&lt;div style=&quot;min-height: 375px&quot;&gt; &lt;canvas id=&quot;chartjs-line-chart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+
+                                            <div id="gl-sample-code-js">
+                                                <pre>
+                                                    <code class=" language-javascript">
+window.chartColors = {
+red: 'rgb(255, 99, 132)',
+orange: 'rgb(255, 159, 64)',
+yellow: 'rgb(255, 205, 86)',
+green: 'rgb(75, 192, 192)',
+blue: 'rgb(54, 162, 235)',
+purple: 'rgb(153, 102, 255)',
+grey: 'rgb(201, 203, 207)'
+};
+
+window.randomScalingFactor = function() {
+return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+};
+
+var lineConfig = {
+type: 'line',
+data: {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [{
+        label: "My First dataset",
+        backgroundColor: window.chartColors.red,
+        borderColor: window.chartColors.red,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ],
+        fill: false,
+    }, {
+        label: "My Second dataset",
+        fill: false,
+        backgroundColor: window.chartColors.blue,
+        borderColor: window.chartColors.blue,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ],
+    }]
+},
+options: {
+    responsive: true,                     maintainAspectRatio: false,
+    title: {
+        display: true,
+        text: 'Line Chart'
+    },
+    tooltips: {
+        mode: 'index',
+        intersect: false,
+    },
+    hover: {
+        mode: 'nearest',
+        intersect: true
+    },
+    scales: {
+        xAxes: [{
+            display: true,
+            scaleLabel: {
+                display: true,
+                labelString: 'Month'
+            }
+        }],
+        yAxes: [{
+            display: true,
+            scaleLabel: {
+                display: true,
+                labelString: 'Value'
+            }
+        }]
+    }
+}
+};
+
+// chart initialize
+var lineCtx = document.getElementById("chartjs-line-chart").getContext("2d");
+window.myLine = new Chart(lineCtx, lineConfig);
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end line Chart sample code-->
+                                </div>
+                                <!-- End line Chart -->
+                                <!-- //////////////////////////////////////// -->
+
+                            </div>
+                            <!--end card content-->
+                        </div>
+                        <!--end  line Chart card-->
+
+                        <!-- Start Pie Chart Card-->
+                        <div class="card ui-app__page-content">
+                            <!--card content-->
+                            <div class="card-content">
+
+                                <!-- //////////////////////////////////////// -->
+                                <!-- Pie Chart -->
+
+                                <!--card title-->
+                                <div class="card-title headline">Pie Chart</div>
+                                <div class="card-body">
+                                    <!--Pie chart content-->
+                                    <div style="min-height: 375px"> <canvas id="chartjs-pie-chart"></canvas></div>
+
+                                    <!--Pie Chart sample code-->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a class="active" href="#gp-sample-code-html">HTML</a></li>
+                                                <li class="tab"><a href="#gp-sample-code-js">JS</a></li>
+                                            </ul>
+
+                                            <div id="gp-sample-code-html">
+                                                <pre>
+                                                    <code class="language-html">
+&lt;div style=&quot;min-height: 375px&quot;&gt; &lt;canvas id=&quot;chartjs-pie-chart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+
+                                            <div id="gp-sample-code-js">
+                                                <pre>
+                                                    <code class=" language-javascript">
+window.chartColors = {
+red: 'rgb(255, 99, 132)',
+orange: 'rgb(255, 159, 64)',
+yellow: 'rgb(255, 205, 86)',
+green: 'rgb(75, 192, 192)',
+blue: 'rgb(54, 162, 235)',
+purple: 'rgb(153, 102, 255)',
+grey: 'rgb(201, 203, 207)'
+};
+
+var pieConfig = {
+type: 'pie',
+data: {
+    datasets: [{
+        data: [
+            400, 300, 100, 800, 600
+        ],
+        backgroundColor: [
+            window.chartColors.red,
+            window.chartColors.orange,
+            window.chartColors.yellow,
+            window.chartColors.green,
+            window.chartColors.blue,
+        ],
+        label: 'Dataset 1'
+    }],
+    labels: [
+        "Red",
+        "Orange",
+        "Yellow",
+        "Green",
+        "Blue"
+    ]
+},
+options: {
+    responsive: true
+}
+};
+
+// chart initialize
+var pieCtx = document.getElementById("chartjs-pie-chart").getContext("2d");
+window.myPie = new Chart(pieCtx, pieConfig);
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end Pie Chart sample code-->
+                                </div>
+                                <!-- End Pie Chart -->
+                                <!-- //////////////////////////////////////// -->
+
+                            </div>
+                            <!--end card content-->
+                        </div>
+                        <!--end  Pie Chart card-->
+
+                        <!-- Start Donut Chart Card-->
+                        <div class="card ui-app__page-content">
+                            <!--card content-->
+                            <div class="card-content">
+
+                                <!-- //////////////////////////////////////// -->
+                                <!-- Donut Chart -->
+
+                                <!--card title-->
+                                <div class="card-title headline">Donut Chart</div>
+                                <div class="card-body">
+                                    <!--Donut chart content-->
+                                    <div style="min-height: 375px"> <canvas id="chartjs-doughnut-chart"></canvas></div>
+
+                                    <!--Donut Chart sample code-->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a class="active" href="#gd-sample-code-html">HTML</a></li>
+                                                <li class="tab"><a href="#gd-sample-code-js">JS</a></li>
+                                            </ul>
+
+                                            <div id="gd-sample-code-html">
+                                                <pre>
+                                                    <code class="language-html">
+&lt;div style=&quot;min-height: 375px&quot;&gt; &lt;canvas id=&quot;chartjs-doughnut-chart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+
+                                            <div id="gd-sample-code-js">
+                                                <pre>
+                                                    <code class=" language-javascript">
+window.chartColors = {
+red: 'rgb(255, 99, 132)',
+orange: 'rgb(255, 159, 64)',
+yellow: 'rgb(255, 205, 86)',
+green: 'rgb(75, 192, 192)',
+blue: 'rgb(54, 162, 235)',
+purple: 'rgb(153, 102, 255)',
+grey: 'rgb(201, 203, 207)'
+};
+
+var doughnutConfig = {
+type: 'doughnut',
+data: {
+    datasets: [{
+        data: [
+            400, 300, 100, 800, 600
+        ],
+        backgroundColor: [
+            window.chartColors.red,
+            window.chartColors.orange,
+            window.chartColors.yellow,
+            window.chartColors.green,
+            window.chartColors.blue,
+        ],
+        label: 'Dataset 1'
+    }],
+    labels: [
+        "Red",
+        "Orange",
+        "Yellow",
+        "Green",
+        "Blue"
+    ]
+},
+options: {
+    responsive: true
+}
+};
+
+// chart initialize
+var doughnutCtx = document.getElementById("chartjs-doughnut-chart").getContext("2d");
+window.myDoughnut = new Chart(doughnutCtx, doughnutConfig);
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end Donut Chart sample code-->
+                                </div>
+                                <!-- End Donut Chart -->
+                                <!-- //////////////////////////////////////// -->
+
+                            </div>
+                            <!--end card content-->
+                        </div>
+                        <!--end  Combo Chart card-->
+
+                        <!-- Start Combo Chart Card-->
+                        <div class="card ui-app__page-content">
+                            <!--card content-->
+                            <div class="card-content">
+
+                                <!-- //////////////////////////////////////// -->
+                                <!-- Combo Chart -->
+
+                                <!--card title-->
+                                <div class="card-title headline">Combo Chart</div>
+                                <div class="card-body">
+                                    <!--Combo chart content-->
+                                    <div style="min-height: 375px"> <canvas id="chartjs-combo-chart"></canvas></div>
+
+                                    <!--Combo Chart sample code-->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a class="active" href="#gco-sample-code-html">HTML</a></li>
+                                                <li class="tab"><a href="#gco-sample-code-js">JS</a></li>
+                                            </ul>
+
+                                            <div id="gco-sample-code-html">
+                                                <pre>
+                                                    <code class="language-html">
+&lt;div style=&quot;min-height: 375px&quot;&gt; &lt;canvas id=&quot;chartjs-combo-chart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+
+                                            <div id="gco-sample-code-js">
+                                                <pre>
+                                                    <code class=" language-javascript">
+window.chartColors = {
+red: 'rgb(255, 99, 132)',
+orange: 'rgb(255, 159, 64)',
+yellow: 'rgb(255, 205, 86)',
+green: 'rgb(75, 192, 192)',
+blue: 'rgb(54, 162, 235)',
+purple: 'rgb(153, 102, 255)',
+grey: 'rgb(201, 203, 207)'
+};
+
+window.randomScalingFactor = function() {
+return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+};
+
+var comboConfig = {
+type: 'bar',
+data: {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [{
+        type: 'line',
+        label: 'Dataset 1',
+        borderColor: window.chartColors.blue,
+        borderWidth: 2,
+        fill: false,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ]
+    }, {
+        type: 'bar',
+        label: 'Dataset 2',
+        backgroundColor: window.chartColors.red,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ],
+        borderColor: 'white',
+        borderWidth: 2
+    }, {
+        type: 'bar',
+        label: 'Dataset 3',
+        backgroundColor: window.chartColors.green,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ]
+    }]
+},
+options: {
+    responsive: true,                     maintainAspectRatio: false,
+    title: {
+        display: true,
+        text: 'Combo Bar Line Chart'
+    },
+    tooltips: {
+        mode: 'index',
+        intersect: true
+    }
+}
+};
+
+// chart initialize
+var comboCtx = document.getElementById("chartjs-combo-chart").getContext("2d");
+window.myCombo = new Chart(comboCtx, comboConfig);
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end Combo Chart sample code-->
+                                </div>
+                                <!-- End Combo Chart -->
+                                <!-- //////////////////////////////////////// -->
+
+                            </div>
+                            <!--end card content-->
+                        </div>
+                        <!--end  Combo Chart card-->
+
+                        <!-- Start Polar Area Chart Card-->
+                        <div class="card ui-app__page-content">
+                            <!--card content-->
+                            <div class="card-content">
+
+                                <!-- //////////////////////////////////////// -->
+                                <!-- Polar Area Chart -->
+
+                                <!--card title-->
+                                <div class="card-title headline">Polar Area Chart</div>
+                                <div class="card-body">
+                                    <!--Polar Area chart content-->
+                                    <div style="min-height: 375px"> <canvas id="chartjs-polar-area-chart"></canvas></div>
+
+                                    <!--Polar Area Chart sample code-->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a class="active" href="#gt-sample-code-html">HTML</a></li>
+                                                <li class="tab"><a href="#gt-sample-code-js">JS</a></li>
+                                            </ul>
+
+                                            <div id="gt-sample-code-html">
+                                                <pre>
+                                                    <code class="language-html">
+&lt;div style=&quot;min-height: 375px&quot;&gt; &lt;canvas id=&quot;chartjs-polar-area-chart&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+
+                                            <div id="gt-sample-code-js">
+                                                <pre>
+                                                    <code class=" language-javascript">
+window.chartColors = {
+red: 'rgb(255, 99, 132)',
+orange: 'rgb(255, 159, 64)',
+yellow: 'rgb(255, 205, 86)',
+green: 'rgb(75, 192, 192)',
+blue: 'rgb(54, 162, 235)',
+purple: 'rgb(153, 102, 255)',
+grey: 'rgb(201, 203, 207)'
+};
+
+window.randomScalingFactor = function() {
+return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+};
+
+var polarAreaConfig = {
+data: {
+    datasets: [{
+        data: [
+            90, 300, 600, 400, 100
+        ],
+        backgroundColor: [
+            window.chartColors.red,
+            window.chartColors.orange,
+            window.chartColors.yellow,
+            window.chartColors.green,
+            window.chartColors.blue,
+        ],
+        label: 'My dataset' // for legend
+    }],
+    labels: [
+        "Red",
+        "Orange",
+        "Yellow",
+        "Green",
+        "Blue"
+    ]
+},
+options: {
+    responsive: true,                     maintainAspectRatio: false,
+    legend: {
+        position: 'right',
+    },
+    title: {
+        display: true,
+        text: 'Polar Area Chart'
+    },
+    scale: {
+        ticks: {
+            beginAtZero: true
+        },
+        reverse: false
+    },
+    animation: {
+        animateRotate: false,
+        animateScale: true
+    }
+}
+};
+
+// Polar area chart initialize
+var polarAreactx = document.getElementById("chartjs-polar-area-chart");
+window.myPolarArea = Chart.PolarArea(polarAreactx, polarAreaConfig);
+
+
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end Polar Area Chart sample code-->
+                                </div>
+                                <!-- End Polar Area Chart -->
+                                <!-- //////////////////////////////////////// -->
+
+                            </div>
+                            <!--end card content-->
+                        </div>
+                        <!--end  Polar Area Chart card-->
+
+                        <!-- Start Radar Chart Card-->
+                        <div class="card ui-app__page-content">
+                            <!--card content-->
+                            <div class="card-content">
+
+                                <!-- //////////////////////////////////////// -->
+                                <!-- Radar Chart -->
+
+                                <!--card title-->
+                                <div class="card-title headline">Radar Chart</div>
+                                <div class="card-body">
+                                    <!--Radar chart content-->
+                                    <div style="min-height: 375px">
+                                        <canvas id="chartjs-radar-chart"></canvas>
+                                    </div>
+
+                                    <!--Radar Chart sample code-->
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a class="active" href="#gbu-sample-code-html">HTML</a></li>
+                                                <li class="tab"><a href="#gbu-sample-code-js">JS</a></li>
+                                            </ul>
+
+                                            <div id="gbu-sample-code-html">
+                                                <pre>
+                                                    <code class="language-html">
+&lt;div style=&quot;min-height: 375px&quot;&gt;
+    &lt;canvas id=&quot;chartjs-radar-chart&quot;&gt;&lt;/canvas&gt;
+&lt;/div&gt;
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+
+                                            <div id="gbu-sample-code-js">
+                                                <pre>
+                                                    <code class=" language-javascript">
+window.chartColors = {
+red: 'rgb(255, 99, 132)',
+orange: 'rgb(255, 159, 64)',
+yellow: 'rgb(255, 205, 86)',
+green: 'rgb(75, 192, 192)',
+blue: 'rgb(54, 162, 235)',
+purple: 'rgb(153, 102, 255)',
+grey: 'rgb(201, 203, 207)'
+};
+
+window.randomScalingFactor = function() {
+return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+};
+var color = Chart.helpers.color;
+var radarConfig = {
+type: 'radar',
+data: {
+    labels: [
+        ["Eating", "Dinner"],
+        ["Drinking", "Water"], "Sleeping", ["Designing", "Graphics"], "Coding", "Cycling", "Running"
+    ],
+    datasets: [{
+        label: "My First dataset",
+        backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+        borderColor: window.chartColors.red,
+        pointBackgroundColor: window.chartColors.red,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ]
+    }, {
+        label: "My Second dataset",
+        backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
+        borderColor: window.chartColors.blue,
+        pointBackgroundColor: window.chartColors.blue,
+        data: [
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor(),
+            randomScalingFactor()
+        ]
+    }, ]
+},
+options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    legend: {
+        position: 'top',
+    },
+    title: {
+        display: true,
+        text: 'Radar Chart'
+    },
+    scale: {
+        ticks: {
+            beginAtZero: true
+        }
+    }
+}
+};
+
+// Radar chart initialize
+window.myRadar = new Chart(document.getElementById("chartjs-radar-chart"), radarConfig);
+
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end Radar Chart sample code-->
+                                </div>
+                                <!-- End Radar Chart -->
+                                <!-- //////////////////////////////////////// -->
+
+                            </div>
+                            <!--end card content-->
+                        </div>
+                        <!--end  Radar Chart card-->
+                    </div>
+                    <!--end column-->
+
+
+                </div>
+                <!--End Page content -->
+
+            </main>
+            <!--End page body-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Footer-->
+            <footer class="page-footer">
+                <div class="footer-copyright white grey-text">
+                    &copy; 2018 designlayout
+                </div>
+            </footer>
+            <!--End footer-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+        </div>
+        <!-- End Efnify body page wrapper -->
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+    </div>
+
+    <!-- End Efnify body -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!--  Scripts-->
+
+    <!-- Import jquery -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Import materialize js -->
+    <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <!-- Import prismjs (syntex highlighter) -->
+    <script src="../node_modules/prismjs/prism.js"></script>
+    <!-- Import chartjs (chart library) -->
+    <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+    <!-- Import Efnify app js -->
+    <script src="../assets/js/app.js"></script>
+    <!-- Import Efnify search js (Placed in navbar) -->
+    <script src="../assets/js/search.js"></script>
+
+    <!-- ChartJS Charts (Use for only demo purpose) -->
+    <script>
+        // chartjs global initialize
+        window.chartColors = {
+            red: 'rgb(255, 99, 132)',
+            orange: 'rgb(255, 159, 64)',
+            yellow: 'rgb(255, 205, 86)',
+            green: 'rgb(75, 192, 192)',
+            blue: 'rgb(54, 162, 235)',
+            purple: 'rgb(153, 102, 255)',
+            grey: 'rgb(201, 203, 207)'
+        };
+
+        window.randomScalingFactor = function() {
+            return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+        };
+
+
+        // Area chart demo
+
+        var areaConfig = {
+            type: 'line',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "My First dataset",
+                    backgroundColor: '#ffcccc',
+                    borderColor: window.chartColors.red,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                    fill: true,
+                }, {
+                    label: "My Second dataset",
+                    fill: true,
+                    backgroundColor: '#9cb3fc',
+                    borderColor: window.chartColors.blue,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Area Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                }
+            }
+        };
+
+        // Bar chart demo
+        var barConfig = {
+            type: 'bar',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: 'Dataset 1',
+                    backgroundColor: window.chartColors.red,
+                    borderColor: window.chartColors.red,
+                    borderWidth: 1,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: 'Dataset 2',
+                    backgroundColor: window.chartColors.blue,
+                    borderColor: window.chartColors.blue,
+                    borderWidth: 1,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }]
+
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Bar Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                }
+            }
+        };
+
+        // Line chart demo
+
+        var lineConfig = {
+            type: 'line',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: "My First dataset",
+                    backgroundColor: window.chartColors.red,
+                    borderColor: window.chartColors.red,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                    fill: false,
+                }, {
+                    label: "My Second dataset",
+                    fill: false,
+                    backgroundColor: window.chartColors.blue,
+                    borderColor: window.chartColors.blue,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Line Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                }
+            }
+        };
+
+        // Pie chart demo
+
+        var pieConfig = {
+            type: 'pie',
+            data: {
+                datasets: [{
+                    data: [
+                        400, 300, 100, 800, 600
+                    ],
+                    backgroundColor: [
+                        window.chartColors.red,
+                        window.chartColors.orange,
+                        window.chartColors.yellow,
+                        window.chartColors.green,
+                        window.chartColors.blue,
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    "Red",
+                    "Orange",
+                    "Yellow",
+                    "Green",
+                    "Blue"
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Pie Chart'
+                }
+            }
+        };
+
+        // Doughnut chart demo
+        var doughnutConfig = {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [
+                        400, 300, 100, 800, 600
+                    ],
+                    backgroundColor: [
+                        window.chartColors.red,
+                        window.chartColors.orange,
+                        window.chartColors.yellow,
+                        window.chartColors.green,
+                        window.chartColors.blue,
+                    ],
+                    label: 'Dataset 1'
+                }],
+                labels: [
+                    "Red",
+                    "Orange",
+                    "Yellow",
+                    "Green",
+                    "Blue"
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Donut Chart'
+                }
+            }
+        };
+
+        // Combo chart demo
+
+        var comboConfig = {
+            type: 'bar',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    type: 'line',
+                    label: 'Dataset 1',
+                    borderColor: window.chartColors.blue,
+                    borderWidth: 2,
+                    fill: false,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    type: 'bar',
+                    label: 'Dataset 2',
+                    backgroundColor: window.chartColors.red,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ],
+                    borderColor: 'white',
+                    borderWidth: 2
+                }, {
+                    type: 'bar',
+                    label: 'Dataset 3',
+                    backgroundColor: window.chartColors.green,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Combo Bar Line Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: true
+                }
+            }
+        };
+
+        // Polar area chart demo
+
+        var polarAreaConfig = {
+            data: {
+                datasets: [{
+                    data: [
+                        190, 500, 600, 400, 200
+                    ],
+                    backgroundColor: [
+                        window.chartColors.red,
+                        window.chartColors.orange,
+                        window.chartColors.yellow,
+                        window.chartColors.green,
+                        window.chartColors.blue,
+                    ],
+                    label: 'My dataset' // for legend
+                }],
+                labels: [
+                    "Red",
+                    "Orange",
+                    "Yellow",
+                    "Green",
+                    "Blue"
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'right',
+                },
+                title: {
+                    display: true,
+                    text: 'Polar Area Chart'
+                },
+                scale: {
+                    ticks: {
+                        beginAtZero: true
+                    },
+                    reverse: false
+                },
+                animation: {
+                    animateRotate: false,
+                    animateScale: true
+                }
+            }
+        };
+
+        // Radar chart demo
+
+        var color = Chart.helpers.color;
+        var radarConfig = {
+            type: 'radar',
+            data: {
+                labels: [
+                    ["Eating", "Dinner"],
+                    ["Drinking", "Water"], "Sleeping", ["Designing", "Graphics"], "Coding", "Cycling", "Running"
+                ],
+                datasets: [{
+                    label: "My First dataset",
+                    backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
+                    borderColor: window.chartColors.red,
+                    pointBackgroundColor: window.chartColors.red,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, {
+                    label: "My Second dataset",
+                    backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
+                    borderColor: window.chartColors.blue,
+                    pointBackgroundColor: window.chartColors.blue,
+                    data: [
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor(),
+                        randomScalingFactor()
+                    ]
+                }, ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Radar Chart'
+                },
+                scale: {
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+
+        // Area chart initialize
+        var areaCtx = document.getElementById("chartjs-area-chart").getContext("2d");
+        window.myArea = new Chart(areaCtx, areaConfig);
+
+        // Bar chart initialize
+        var barCtx = document.getElementById("chartjs-bar-chart").getContext("2d");
+        window.myBar = new Chart(barCtx, barConfig);
+
+        // Line chart initialize
+        var lineCtx = document.getElementById("chartjs-line-chart").getContext("2d");
+        window.myLine = new Chart(lineCtx, lineConfig);
+
+        // Pie chart initialize
+        var pieCtx = document.getElementById("chartjs-pie-chart").getContext("2d");
+        window.myPie = new Chart(pieCtx, pieConfig);
+
+        // Doughnut chart initialize
+        var doughnutCtx = document.getElementById("chartjs-doughnut-chart").getContext("2d");
+        window.myDoughnut = new Chart(doughnutCtx, doughnutConfig);
+
+        // Combo chart initialize
+        var comboCtx = document.getElementById("chartjs-combo-chart").getContext("2d");
+        window.myCombo = new Chart(comboCtx, comboConfig);
+
+        // Polar area chart initialize
+        var polarAreactx = document.getElementById("chartjs-polar-area-chart");
+        window.myPolarArea = Chart.PolarArea(polarAreactx, polarAreaConfig);
+
+        // Radar chart initialize
+        window.myRadar = new Chart(document.getElementById("chartjs-radar-chart"), radarConfig);
+    </script>
+    </script>
+
+    <!--End scripts-->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+</body>
+<!--End body-->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- Mirrored from vuelayout.com/efnify/html/chartjs-charts.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Feb 2019 03:06:29 GMT -->
+</html>
+<!--End HTML-->
+<!-- //////////////////////////////////////////////////////////////////////////// -->

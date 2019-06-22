@@ -1,0 +1,987 @@
+<!--Design by designlayout-->
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--Start HTML document-->
+
+<!DOCTYPE html>
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--HTML-->
+<html lang="en">
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--Head-->
+
+
+<!-- Mirrored from vuelayout.com/efnify/html/color.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Feb 2019 03:06:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Page title-->
+    <title>Color - Efnify</title>
+
+    <!--Browser navbar color (#5c6bc0: indigo lighten-1) for mobile-->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#5c6bc0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#5c6bc0">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5c6bc0">
+    <!--Favicon icon-->
+    <link href="../assets/images/favicon.png" type="image/png" rel="icon">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- ================================================
+    CSS
+    ================================================ -->
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css" />
+    <!-- Import prismjs (syntex highlighter) -->
+    <link type="text/css" rel="stylesheet" href="../node_modules/prismjs/themes/prism.css" />
+    <!-- Import animate.css -->
+    <link type="text/css" rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+    <!-- Import Efnify app css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/app.css" />
+    <!-- Import Efnify app helper class css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/helper.css" />
+    <!-- Import Efnify app responsive css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/responsive.css" />
+    <!-- Import Efnify app theme css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/theme/default.css" />
+
+
+</head>
+<!-- End head-->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--body-->
+
+<body>
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!--Efnify body-->
+    <div class="ui-app">
+
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+        <!--Efnify body page wrapper -->
+        <div class="ui-app__wrapper" id="app-layout-control">
+
+            <!-- ////////////////s//////////////////////////////////////////////////////////// -->
+            <!--prepage loader-->
+            <div id="prepage-loader">
+                <div class="ui-app__prepage-loader spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+            <!-- End prepage loader-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- /////////////////////////////////////////////////////////////////// -->
+            <!--navbar/header-->
+            <div class="navbar-fixed">
+                <nav class="ui-app__wrapper__navbar">
+                    <div class="nav-wrapper">
+
+                        <!-- //////////////////////////////////////////////////////// -->
+                        <!-- navbar left side  -->
+                        <div class="ui-app__wrapper__navbar__leftside--icons">
+
+                            <!-- left sidenav toggle button(show and hide sidenav) -->
+                            <div class="left ui-app__wrapper__navbar__leftside--icons__sidenav--toggle ui-app__wrapper__navbar__leftside--icon__item" data-target="ui-app__left-sidenav-slide-out" id="left-sidenav-toggle">
+                                <i class="material-icons">menu</i>
+                            </div>
+
+                            <!-- Efnify app/brand title -->
+                            <a href="dashboard.html" class="brand-logo ui-app__wrapper__navbar__leftside--icon__item">Efnify</a>
+
+                            <!-- left sidenav toggle button(small and large sidenav) -->
+                            <div class="ui-app__wrapper__navbar__leftside--icons__sidenav-small--toggle hide-on-med-and-down ui-app__wrapper__navbar__leftside--icon__item" id="left-sidenav-small-toggle">
+                                <i class="material-icons">radio_button_checked</i>
+                            </div>
+                        </div>
+                        <!-- End navbar left side  -->
+                        <!-- ///////////////////////////////////////////////////////////////// -->
+
+                        <!--Search box-->
+                        <!-- ////////////////////////////////////////////////////////////// -->
+                        <div class="ui-app__wrapper__navbar__leftside__search hide-on-med-and-down">
+                            <!-- Search form -->
+                            <form action="#">
+                                <div class="input-field">
+                                    <!--Search input-->
+                                    <input id="search" type="search" autocomplete="off" placeholder="Search pages here!">
+                                    <!--End Search input-->
+                                    <!--Search icon-->
+                                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                    <!--End Search icon-->
+
+
+
+                                </div>
+                            </form>
+                            <!-- End Search form -->
+                        </div>
+                        <!--End Search box-->
+                        <!-- ////////////////////////////////////////////////////////////////// -->
+
+                        <!-- ////////////////////////////////////////////////////////////////// -->
+                        <!-- navbar right side  -->
+                        <div class="ui-app__wrapper__navbar__rightside--icons right">
+                            <!-- navbar menu list -->
+                            <ul>
+                                <!-- full menu demo -->
+                                <li class="ui-app__wrapper__navbar__rightside--icons__item hide-on-small-only"><a class="btn btn-depressed dropdown-trigger dropdown-fixed-width" href="#!" data-target="dropdown-full-menu-target"><i class="material-icons white-text right">arrow_drop_down</i> full menu </a></li>
+                                <!-- End full menu demo -->
+                                <!-- refresh/reload page button -->
+                                <li class="ui-app__wrapper__navbar__rightside--icons__item hide-on-small-only" id="app-page-refresh"><i class="material-icons">refresh</i></li>
+
+                                <!-- notification list -->
+                                <li class="ui-app__wrapper__navbar__rightside--icons__item ui-app__wrapper__navbar__rightside--notifications notification-badge" data-target='dropdown-notifications-target' data-notifications="4"><i class="material-icons">notifications</i></li>
+
+
+                                <!-- User profile -->
+                                <li class="ui-app__wrapper__navbar__rightside--users ui-app__wrapper__navbar__rightside--icons__item" data-target="dropdown-user-profile-target">
+                                    M
+                                </li>
+
+                            </ul>
+                            <!-- full menu dropdown structure -->
+                            <div id="dropdown-full-menu-target" class="dropdown-content dropdown-full-width ui-app__wrapper__navbar__rightside--full-menu__dropdown ">
+                                <div class="row p-a-15">
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Material UI</div>
+                                        <ul>
+                                            <li><a href="#!">Buttons</a></li>
+                                            <li><a href="#!">Badges</a></li>
+                                            <li><a href="#!">Breadcrumbs</a></li>
+                                            <li><a href="#!">Collections</a></li>
+                                            <li><a href="#!">Collapsibles</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">CSS</div>
+                                        <ul>
+                                            <li><a href="#!">Typography</a></li>
+                                            <li><a href="#!">Icons</a></li>
+                                            <li><a href="#!">Animations</a></li>
+                                            <li><a href="#!">Shadow</a></li>
+                                            <li><a href="#!">Media</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Advanced UI</div>
+                                        <ul>
+                                            <li><a href="#!">Carousel</a></li>
+                                            <li><a href="#!">Range Slider</a></li>
+                                            <li><a href="#!">SweetAlert</a></li>
+                                            <li><a href="#!">Highlight</a></li>
+                                            <li><a href="#!">Cards</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Forms</div>
+                                        <ul>
+                                            <li><a href="#!">Form Layouts</a></li>
+                                            <li><a href="#!">Form Validations</a></li>
+                                            <li><a href="#!">Form Masks</a></li>
+                                            <li><a href="#!">Text Editor</a></li>
+                                            <li><a href="#!">Form Elements</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Home</div>
+                                        <ul>
+                                            <li><a href="#!">Signup</a></li>
+                                            <li><a href="#!">Change Password</a></li>
+                                            <li><a href="#!">Contactus</a></li>
+                                            <li><a href="#!">Blank Page</a></li>
+                                            <li><a href="#!">Reset</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Elements</div>
+                                        <ul>
+                                            <li><a href="#!">Grid</a></li>
+                                            <li><a href="#!">Color</a></li>
+                                            <li><a href="#!">widgets</a></li>
+                                            <li><a href="#!">Helpers</a></li>
+                                            <li><a href="#!">Search Page</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End full menu dropdown structure -->
+
+                            <!-- User profile dropdown structure -->
+                            <div id="dropdown-user-profile-target" class="ui-app__wrapper__navbar__rightside--users__dropdown dropdown-content">
+                                <ul>
+                                    <li><a href="#!"><i class="material-icons">perm_identity</i>My Profile</a></li>
+                                    <li><a href="javascript:void(0)" class="toggle-right-sidenav"><i class="material-icons">settings</i>Page Customizer</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="lock.html"><i class="material-icons">lock</i>Lock</a></li>
+                                    <li><a href="signup.html"><i class="material-icons">power_settings_new</i>Logout</a></li>
+                                </ul>
+                            </div>
+                            <!-- End user profile dropdown structure -->
+                            <!-- Notifications dropdown structure -->
+                            <div id="dropdown-notifications-target" class="ui-app__wrapper__navbar__rightside--notifications__dropdown dropdown-content">
+                                <ul class="collection">
+                                    <li class="collection-item avatar"> <img src="../assets/images/user1.jpg" alt="user profile picture" class="circle"> <span class="title">Brunch this weekend?</span>
+                                        <p>Ali Connors <span class="body-1">&mdash; I'll be in your neighborhood doing errands this weekend.</span></p>
+                                    </li>
+                                    <li class="collection-item avatar"> <img src="../assets/images/user2.jpg" alt="user profile picture" class="circle"> <span class="title">Oui oui</span>
+                                        <p>Sandra Adams <span class="body-1">&mdash; Do you have Paris recommendations? Have you ever been?</span></p>
+                                    </li>
+                                    <li class="collection-item avatar"> <img src="../assets/images/user3.jpg" alt="user profile picture" class="circle"> <span class="title">Birthday gift</span>
+                                        <p>Trevor Hansen <span class="body-1">&mdash; Have any ideas about what we should get Heidi for her birthday?</span></p>
+                                    </li>
+                                    <li class="collection-item avatar"> <img src="../assets/images/user4.jpg" alt="user profile picture" class="circle"> <span class="title">Recipe to try</span>
+                                        <p>Britta Holt <span class="body-1">&mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.</span></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End notifications dropdown structure -->
+
+                        </div>
+                        <!-- End navbar left side  -->
+                        <!-- ////////////////////////////////////////////////////////// -->
+                    </div>
+
+                </nav>
+            </div>
+            <!--End navbar/header-->
+            <!-- //////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Left sidenav/sidebar-->
+            <aside class="ui-app__left-sidenav sidenav sidenav-fixed" id="ui-app__left-sidenav-slide-out">
+
+                <!-- sidenav menu list -->
+                <ul class="no-margin">
+                    <!-- dashboard menu -->
+                    <li>
+                        <a href="dashboard.html" class="waves-effect waves-light btn btn-rounded btn-dashboard"><i class="material-icons left">dashboard</i>Dashboard</a>
+                    </li>
+                    <!--end  dashboard menu -->
+
+                    <!-- sidenav main menu list -->
+                    <li>
+                        <ul class="ui-app__left-sidenav__menu collapsible collapsible-accordion ui-app__scrollbar">
+                            <li>
+
+                                <a class="collapsible-header waves-effect waves-default"><i class="material-icons left">build</i>Material UI<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="button.html" class="waves-effect waves-default">Button</a></li>
+                                        <li><a href="floating-action-button.html" class="waves-effect waves-default">Floating Action Button</a></li>
+                                        <li><a href="breadcrumbs.html" class="waves-effect waves-default">Breadcrumbs</a></li>
+                                        <li><a href="collections.html" class="waves-effect waves-default">Collections</a></li>
+                                        <li><a href="collapsibles.html" class="waves-effect waves-default">Collapsibles</a></li>
+                                        <li><a href="dropdown.html" class="waves-effect waves-default">Dropdown</a></li>
+                                        <li><a href="tabs.html" class="waves-effect waves-default">Tabs</a></li>
+                                        <li><a href="pagination.html" class="waves-effect waves-default">Pagination</a></li>
+                                        <li><a href="preloader.html" class="waves-effect waves-default">Preloader</a></li>
+                                        <li><a href="toasts.html" class="waves-effect waves-default">Toasts</a></li>
+                                        <li><a href="tooltip.html" class="waves-effect waves-default">Tooltip</a></li>
+                                        <li><a href="waves.html" class="waves-effect waves-default">Waves</a></li>
+                                        <li><a href="typography.html" class="waves-effect waves-default">Typography</a></li>
+                                        <li><a href="icons.html" class="waves-effect waves-default">Icons</a></li>
+                                        <li><a href="animations.html" class="waves-effect waves-default">Animations</a></li>
+                                        <li><a href="shadow.html" class="waves-effect waves-default">Shadow</a></li>
+                                        <li><a href="media.html" class="waves-effect waves-default">Media</a></li>
+                                        <li><a href="css-transitions.html" class="waves-effect waves-default">CSS Transitions</a></li>
+                                        <li><a href="pulse.html" class="waves-effect waves-default">Pulse</a></li>
+                                        <li><a href="feature-discovery.html" class="waves-effect waves-default">FeatureDiscovery</a></li>
+                                        <li><a href="media-js.html" class="waves-effect waves-default">Media JavaScript</a></li>
+
+                                        <li><a href="cards.html" class="waves-effect waves-default">Cards</a></li>
+                                        <li><a href="carousel.html" class="waves-effect waves-default">Carousel</a></li>
+                                        <li><a href="modals.html" class="waves-effect waves-default">Modals</a></li>
+                                        <li><a href="range-slider.html" class="waves-effect waves-default">Range Slider</a></li>
+                                        <li><a href="sweetalert.html" class="waves-effect waves-default">SweetAlert</a></li>
+                                        <li><a href="highlight.html" class="waves-effect waves-default">Highlight</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">insert_chart</i>Charts<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+
+
+                                        <li><a href="chartjs-charts.html" class="waves-effect waves-default">ChartJS</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">message</i>Forms<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+
+                                        <li><a href="autocomplete.html" class="waves-effect waves-default">Autocomplete</a></li>
+                                        <li><a href="checkboxes.html" class="waves-effect waves-default">Checkboxes</a></li>
+                                        <li><a href="chips.html" class="waves-effect waves-default">Chips</a></li>
+                                        <li><a href="pickers.html" class="waves-effect waves-default">Pickers</a></li>
+                                        <li><a href="radio-buttons.html" class="waves-effect waves-default">Radio Buttons</a></li>
+                                        <li><a href="range.html" class="waves-effect waves-default">Range</a></li>
+                                        <li><a href="select.html" class="waves-effect waves-default">Select</a></li>
+                                        <li><a href="switches.html" class="waves-effect waves-default">Switches</a></li>
+                                        <li><a href="text-inputs.html" class="waves-effect waves-default">Text Inputs</a></li>
+                                        <li><a href="form-layouts.html" class="waves-effect waves-default">Form Layouts</a></li>
+
+
+                                        <li><a href="text-editor.html" class="waves-effect waves-default">Text Editor</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">border_all</i>Tables<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="basic-table.html" class="waves-effect waves-default">Basic Tables</a></li>
+                                        <li><a href="data-table.html" class="waves-effect waves-default">Data Tables</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">terrain</i>Pages<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="login.html" class="waves-effect waves-default">Login</a></li>
+                                        <li><a href="signup.html" class="waves-effect waves-default">Signup</a></li>
+                                        <li><a href="reset.html" class="waves-effect waves-default">Reset</a></li>
+                                        <li><a href="lock.html" class="waves-effect waves-default">Lock</a></li>
+                                        <li><a href="change-password.html" class="waves-effect waves-default">Change Password</a></li>
+                                        <li><a href="contactus.html" class="waves-effect waves-default">Contactus</a></li>
+                                        <li><a href="blank.html" class="waves-effect waves-default">Blank Page</a></li>
+
+
+                                        <li><a href="404.html" class="waves-effect waves-default">404</a></li>
+                                        <li><a href="500.html" class="waves-effect waves-default">500</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="no-menu-list">
+                                <a href="grid.html" class="collapsible-header"><i class="material-icons left">grid_on</i>Grid</a>
+                                <div class="collapsible-body">
+                                </div>
+                            </li>
+
+                            <li class="no-menu-list active">
+                                <a href="color.html" class="collapsible-header"><i class="material-icons left">format_color_fill</i>Color</a>
+                                <div class="collapsible-body">
+                                </div>
+                            </li>
+
+                            <li class="no-menu-list">
+                                <a href="helpers.html" class="collapsible-header"><i class="material-icons left">live_help</i>Helper class</a>
+                                <div class="collapsible-body">
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                    <!--end sidenav main menu list -->
+
+                    <!-- sidenav quick/sub main menu list -->
+                    <li class="ui-app__left-sidenav__collapsible-quick-menu-name">
+                        Quick Link
+                    </li>
+                    <li>
+                        <ul class="ui-app__left-sidenav__collapsible-quick-menu ui-app__scrollbar">
+                            <li><a href="#!"><i class="material-icons">help</i>Help</a></li>
+                            <li><a href="#!"><i class="material-icons">phone</i>Contact Support</a></li>
+                            <li><a href="#!"><i class="material-icons">email</i>Email Support</a></li>
+                            <li><a href="#!"><i class="material-icons">code</i>API Documentation</a></li>
+                        </ul>
+                    </li>
+                    <!-- end sidenav quick/sub main menu list -->
+                </ul>
+                <!-- end sidenav menu list -->
+            </aside>
+            <!--End Left sidenav/sidebar-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Right sidenav/sidebar-->
+            <aside class="ui-app__right-sidenav sidenav ui-app__scrollbar" id="ui-app__right-sidenav-slide-out">
+
+                <!-- Layout options -->
+                <ul class="ui-app__right-sidenav__layout">
+                    <li>
+                        <h6 class="settings-content-title">Layout Options</h6>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="with-gap" name="layout" type="radio" value="fixed-header-sidenav" checked />
+                            <span>Fixed Header and sidenav(Default)</span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <input class="with-gap" name="layout" type="radio" value="fixed-header-unfixed-sidenav"/>
+                            <span>Fixed Header Unfixed sidenav</span>
+                        </label>
+                    </li>
+
+
+                    <li>
+                        <label>
+                            <input class="with-gap" name="layout" type="radio" value="unfixed-header-sidenav"/>
+                            <span>Unfixed Header and sidenav</span>
+                        </label>
+                    </li>
+                </ul>
+                <!-- End Layout options -->
+
+                <!-- color options -->
+                <ul class="ui-app__right-sidenav__layout">
+                    <li>
+                        <h6 class="settings-content-title">Color Options</h6>
+                    </li>
+                    <li>
+                        <div class="ui-app__right-sidenav__layout__color-body active" data-color="default">
+                            <div class="ui-app__right-sidenav__layout__color-body__header indigo">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="pink">
+                            <div class="ui-app__right-sidenav__layout__color-body__header pink">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="purple">
+                            <div class="ui-app__right-sidenav__layout__color-body__header purple">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="blue">
+                            <div class="ui-app__right-sidenav__layout__color-body__header blue">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="cyan">
+                            <div class="ui-app__right-sidenav__layout__color-body__header cyan">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="teal">
+                            <div class="ui-app__right-sidenav__layout__color-body__header teal">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+
+
+                </ul>
+                <!--end  color options -->
+            </aside>
+
+            <!-- Right sidenav toggle (show and hide right sidenav on click button) -->
+            <a href="#" data-target="ui-app__right-sidenav-slide-out" class="ui-app__right-sidenav-toggle sidenav-trigger btn-floating waves-effect waves-light" id="right-sidenav-toggle"><i class="material-icons ">settings</i></a>
+
+            <!--End Right sidenav/sidebar-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Page Body-->
+            <main>
+                <!-- Page heading -->
+                <div class="row ui-app__row">
+                    <div class="col s12 ui-app__header">
+                        <!-- title -->
+                        <h1 class="ui-app__header__title display-1">Color</h1>
+                        <!-- bookmark -->
+                        <a href="https://materializecss.com/color.html" target="_blank" class="ui-app__header__bookmark"><i class="material-icons">bookmark</i></a>
+
+                        <!-- sub heading -->
+                        <p class="ui-app__header__body subheading">Here is a color palette based on the material design base colors. Each of these colors is defined with a base color class and an optional lighten or darken class.</p>
+
+                    </div>
+                </div>
+                <!-- End page heading -->
+
+                <!-- Page content -->
+                <div class="row">
+                    <!-- Usage -->
+                    <div class="col s12">
+                        <div class="card ui-app__page-content">
+                            <div class="card-content">
+                                <div class="card-title headline">Usage</div>
+
+                                <!-- Background Color -->
+                                <div class="card-body">
+                                    <div class="title">Background Color</div>
+                                    <p>To apply a background color, just add the color name and light/darkness as a class to the element.</p>
+
+                                    <div class="card-panel indigo white-text">This is a card panel with a indigo darken-1 class</div>
+
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a href="#color1-html">HTML</a></li>
+                                            </ul>
+
+                                            <div id="color1-html">
+                                                <pre>
+                                                        <code class="language-html">
+&lt;div class=&quot;card-panel indigo darken-1&quot;&gt;This is a card panel with a indigo darken-1 class&lt;/div&gt;
+                                                        </code>
+                                                    </pre>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- End Background Color -->
+
+                                <!-- Text Color -->
+                                <div class="card-body">
+                                    <div class="title">Text Color</div>
+                                    <p>To apply a text color, just append -text to the color class like this:</p>
+
+                                    <div class="card-panel">
+                                        <span class="blue-text text-darken-2">This is a card panel with dark blue text</span>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a href="#color2-html">HTML</a></li>
+                                            </ul>
+
+                                            <div id="color2-html">
+                                                <pre>
+                                                        <code class="language-html">
+&lt;div class="card-panel">
+    &lt;span class="blue-text text-darken-2">This is a card panel with dark blue text&lt;/span>
+&lt;/div>
+                                                        </code>
+                                                    </pre>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- End Text Color -->
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Usage -->
+
+
+                    <!-- Color Palette -->
+                    <div class="col s12">
+                        <div class="card ui-app__page-content">
+                            <div class="card-content">
+                                <div class="card-title headline">Color Palette</div>
+
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col s12 ui-app__color-demo">
+                                            <div class="col s12 m6 l4">
+                                                <div class="red lighten-5">#ffebee red lighten-5</div>
+                                                <div class="red lighten-4">#ffcdd2 red lighten-4</div>
+                                                <div class="red lighten-3">#ef9a9a red lighten-3</div>
+                                                <div class="red lighten-2">#e57373 red lighten-2</div>
+                                                <div class="red lighten-1">#ef5350 red lighten-1</div>
+                                                <div class="red">#f44336 red</div>
+                                                <div class="red darken-1" style="color: rgba(255, 255, 255, 0.901961);">#e53935 red darken-1</div>
+                                                <div class="red darken-2" style="color: rgba(255, 255, 255, 0.901961);">#d32f2f red darken-2</div>
+                                                <div class="red darken-3" style="color: rgba(255, 255, 255, 0.901961);">#c62828 red darken-3</div>
+                                                <div class="red darken-4" style="color: rgba(255, 255, 255, 0.901961);">#b71c1c red darken-4</div>
+                                                <div class="red accent-1">#ff8a80 red accent-1</div>
+                                                <div class="red accent-2">#ff5252 red accent-2</div>
+                                                <div class="red accent-3">#ff1744 red accent-3</div>
+                                                <div class="red accent-4">#d50000 red accent-4</div>
+                                            </div>
+
+                                            <div class="col s12 m6 l4">
+                                                <div class="pink lighten-5">#fce4ec pink lighten-5</div>
+                                                <div class="pink lighten-4">#f8bbd0 pink lighten-4</div>
+                                                <div class="pink lighten-3">#f48fb1 pink lighten-3</div>
+                                                <div class="pink lighten-2">#f06292 pink lighten-2</div>
+                                                <div class="pink lighten-1">#ec407a pink lighten-1</div>
+                                                <div class="pink">#e91e63 pink</div>
+                                                <div class="pink darken-1" style="color: rgba(255, 255, 255, 0.901961);">#d81b60 pink darken-1</div>
+                                                <div class="pink darken-2" style="color: rgba(255, 255, 255, 0.901961);">#c2185b pink darken-2</div>
+                                                <div class="pink darken-3" style="color: rgba(255, 255, 255, 0.901961);">#ad1457 pink darken-3</div>
+                                                <div class="pink darken-4" style="color: rgba(255, 255, 255, 0.901961);">#880e4f pink darken-4</div>
+                                                <div class="pink accent-1">#ff80ab pink accent-1</div>
+                                                <div class="pink accent-2">#ff4081 pink accent-2</div>
+                                                <div class="pink accent-3">#f50057 pink accent-3</div>
+                                                <div class="pink accent-4">#c51162 pink accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="purple lighten-5">#f3e5f5 purple lighten-5</div>
+                                                <div class="purple lighten-4">#e1bee7 purple lighten-4</div>
+                                                <div class="purple lighten-3">#ce93d8 purple lighten-3</div>
+                                                <div class="purple lighten-2">#ba68c8 purple lighten-2</div>
+                                                <div class="purple lighten-1">#ab47bc purple lighten-1</div>
+                                                <div class="purple">#9c27b0 purple</div>
+                                                <div class="purple darken-1" style="color: rgba(255, 255, 255, 0.901961);">#8e24aa purple darken-1</div>
+                                                <div class="purple darken-2" style="color: rgba(255, 255, 255, 0.901961);">#7b1fa2 purple darken-2</div>
+                                                <div class="purple darken-3" style="color: rgba(255, 255, 255, 0.901961);">#6a1b9a purple darken-3</div>
+                                                <div class="purple darken-4" style="color: rgba(255, 255, 255, 0.901961);">#4a148c purple darken-4</div>
+                                                <div class="purple accent-1">#ea80fc purple accent-1</div>
+                                                <div class="purple accent-2">#e040fb purple accent-2</div>
+                                                <div class="purple accent-3">#d500f9 purple accent-3</div>
+                                                <div class="purple accent-4">#aa00ff purple accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="deep-purple lighten-5">#ede7f6 deep-purple lighten-5</div>
+                                                <div class="deep-purple lighten-4">#d1c4e9 deep-purple lighten-4</div>
+                                                <div class="deep-purple lighten-3">#b39ddb deep-purple lighten-3</div>
+                                                <div class="deep-purple lighten-2">#9575cd deep-purple lighten-2</div>
+                                                <div class="deep-purple lighten-1">#7e57c2 deep-purple lighten-1</div>
+                                                <div class="deep-purple">#673ab7 deep-purple</div>
+                                                <div class="deep-purple darken-1" style="color: rgba(255, 255, 255, 0.901961);">#5e35b1 deep-purple darken-1</div>
+                                                <div class="deep-purple darken-2" style="color: rgba(255, 255, 255, 0.901961);">#512da8 deep-purple darken-2</div>
+                                                <div class="deep-purple darken-3" style="color: rgba(255, 255, 255, 0.901961);">#4527a0 deep-purple darken-3</div>
+                                                <div class="deep-purple darken-4" style="color: rgba(255, 255, 255, 0.901961);">#311b92 deep-purple darken-4</div>
+                                                <div class="deep-purple accent-1">#b388ff deep-purple accent-1</div>
+                                                <div class="deep-purple accent-2">#7c4dff deep-purple accent-2</div>
+                                                <div class="deep-purple accent-3">#651fff deep-purple accent-3</div>
+                                                <div class="deep-purple accent-4">#6200ea deep-purple accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="indigo lighten-5">#e8eaf6 indigo lighten-5</div>
+                                                <div class="indigo lighten-4">#c5cae9 indigo lighten-4</div>
+                                                <div class="indigo lighten-3">#9fa8da indigo lighten-3</div>
+                                                <div class="indigo lighten-2">#7986cb indigo lighten-2</div>
+                                                <div class="indigo lighten-1">#5c6bc0 indigo lighten-1</div>
+                                                <div class="indigo">#3f51b5 indigo</div>
+                                                <div class="indigo darken-1" style="color: rgba(255, 255, 255, 0.901961);">#3949ab indigo darken-1</div>
+                                                <div class="indigo darken-2" style="color: rgba(255, 255, 255, 0.901961);">#303f9f indigo darken-2</div>
+                                                <div class="indigo darken-3" style="color: rgba(255, 255, 255, 0.901961);">#283593 indigo darken-3</div>
+                                                <div class="indigo darken-4" style="color: rgba(255, 255, 255, 0.901961);">#1a237e indigo darken-4</div>
+                                                <div class="indigo accent-1">#8c9eff indigo accent-1</div>
+                                                <div class="indigo accent-2">#536dfe indigo accent-2</div>
+                                                <div class="indigo accent-3">#3d5afe indigo accent-3</div>
+                                                <div class="indigo accent-4">#304ffe indigo accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="blue lighten-5">#e3f2fd blue lighten-5</div>
+                                                <div class="blue lighten-4">#bbdefb blue lighten-4</div>
+                                                <div class="blue lighten-3">#90caf9 blue lighten-3</div>
+                                                <div class="blue lighten-2">#64b5f6 blue lighten-2</div>
+                                                <div class="blue lighten-1">#42a5f5 blue lighten-1</div>
+                                                <div class="blue">#2196f3 blue</div>
+                                                <div class="blue darken-1" style="color: rgba(255, 255, 255, 0.901961);">#1e88e5 blue darken-1</div>
+                                                <div class="blue darken-2" style="color: rgba(255, 255, 255, 0.901961);">#1976d2 blue darken-2</div>
+                                                <div class="blue darken-3" style="color: rgba(255, 255, 255, 0.901961);">#1565c0 blue darken-3</div>
+                                                <div class="blue darken-4" style="color: rgba(255, 255, 255, 0.901961);">#0d47a1 blue darken-4</div>
+                                                <div class="blue accent-1">#82b1ff blue accent-1</div>
+                                                <div class="blue accent-2">#448aff blue accent-2</div>
+                                                <div class="blue accent-3">#2979ff blue accent-3</div>
+                                                <div class="blue accent-4">#2962ff blue accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="light-blue lighten-5">#e1f5fe light-blue lighten-5</div>
+                                                <div class="light-blue lighten-4">#b3e5fc light-blue lighten-4</div>
+                                                <div class="light-blue lighten-3">#81d4fa light-blue lighten-3</div>
+                                                <div class="light-blue lighten-2">#4fc3f7 light-blue lighten-2</div>
+                                                <div class="light-blue lighten-1">#29b6f6 light-blue lighten-1</div>
+                                                <div class="light-blue">#03a9f4 light-blue</div>
+                                                <div class="light-blue darken-1" style="color: rgba(255, 255, 255, 0.901961);">#039be5 light-blue darken-1</div>
+                                                <div class="light-blue darken-2" style="color: rgba(255, 255, 255, 0.901961);">#0288d1 light-blue darken-2</div>
+                                                <div class="light-blue darken-3" style="color: rgba(255, 255, 255, 0.901961);">#0277bd light-blue darken-3</div>
+                                                <div class="light-blue darken-4" style="color: rgba(255, 255, 255, 0.901961);">#01579b light-blue darken-4</div>
+                                                <div class="light-blue accent-1">#80d8ff light-blue accent-1</div>
+                                                <div class="light-blue accent-2">#40c4ff light-blue accent-2</div>
+                                                <div class="light-blue accent-3">#00b0ff light-blue accent-3</div>
+                                                <div class="light-blue accent-4">#0091ea light-blue accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="cyan lighten-5">#e0f7fa cyan lighten-5</div>
+                                                <div class="cyan lighten-4">#b2ebf2 cyan lighten-4</div>
+                                                <div class="cyan lighten-3">#80deea cyan lighten-3</div>
+                                                <div class="cyan lighten-2">#4dd0e1 cyan lighten-2</div>
+                                                <div class="cyan lighten-1">#26c6da cyan lighten-1</div>
+                                                <div class="cyan">#00bcd4 cyan</div>
+                                                <div class="cyan darken-1" style="color: rgba(255, 255, 255, 0.901961);">#00acc1 cyan darken-1</div>
+                                                <div class="cyan darken-2" style="color: rgba(255, 255, 255, 0.901961);">#0097a7 cyan darken-2</div>
+                                                <div class="cyan darken-3" style="color: rgba(255, 255, 255, 0.901961);">#00838f cyan darken-3</div>
+                                                <div class="cyan darken-4" style="color: rgba(255, 255, 255, 0.901961);">#006064 cyan darken-4</div>
+                                                <div class="cyan accent-1">#84ffff cyan accent-1</div>
+                                                <div class="cyan accent-2">#18ffff cyan accent-2</div>
+                                                <div class="cyan accent-3">#00e5ff cyan accent-3</div>
+                                                <div class="cyan accent-4">#00b8d4 cyan accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="teal lighten-5">#e0f2f1 teal lighten-5</div>
+                                                <div class="teal lighten-4">#b2dfdb teal lighten-4</div>
+                                                <div class="teal lighten-3">#80cbc4 teal lighten-3</div>
+                                                <div class="teal lighten-2">#4db6ac teal lighten-2</div>
+                                                <div class="teal lighten-1">#26a69a teal lighten-1</div>
+                                                <div class="teal">#009688 teal</div>
+                                                <div class="teal darken-1" style="color: rgba(255, 255, 255, 0.901961);">#00897b teal darken-1</div>
+                                                <div class="teal darken-2" style="color: rgba(255, 255, 255, 0.901961);">#00796b teal darken-2</div>
+                                                <div class="teal darken-3" style="color: rgba(255, 255, 255, 0.901961);">#00695c teal darken-3</div>
+                                                <div class="teal darken-4" style="color: rgba(255, 255, 255, 0.901961);">#004d40 teal darken-4</div>
+                                                <div class="teal accent-1">#a7ffeb teal accent-1</div>
+                                                <div class="teal accent-2">#64ffda teal accent-2</div>
+                                                <div class="teal accent-3">#1de9b6 teal accent-3</div>
+                                                <div class="teal accent-4">#00bfa5 teal accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="green lighten-5">#e8f5e9 green lighten-5</div>
+                                                <div class="green lighten-4">#c8e6c9 green lighten-4</div>
+                                                <div class="green lighten-3">#a5d6a7 green lighten-3</div>
+                                                <div class="green lighten-2">#81c784 green lighten-2</div>
+                                                <div class="green lighten-1">#66bb6a green lighten-1</div>
+                                                <div class="green">#4caf50 green</div>
+                                                <div class="green darken-1" style="color: rgba(255, 255, 255, 0.901961);">#43a047 green darken-1</div>
+                                                <div class="green darken-2" style="color: rgba(255, 255, 255, 0.901961);">#388e3c green darken-2</div>
+                                                <div class="green darken-3" style="color: rgba(255, 255, 255, 0.901961);">#2e7d32 green darken-3</div>
+                                                <div class="green darken-4" style="color: rgba(255, 255, 255, 0.901961);">#1b5e20 green darken-4</div>
+                                                <div class="green accent-1">#b9f6ca green accent-1</div>
+                                                <div class="green accent-2">#69f0ae green accent-2</div>
+                                                <div class="green accent-3">#00e676 green accent-3</div>
+                                                <div class="green accent-4">#00c853 green accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="light-green lighten-5">#f1f8e9 light-green lighten-5</div>
+                                                <div class="light-green lighten-4">#dcedc8 light-green lighten-4</div>
+                                                <div class="light-green lighten-3">#c5e1a5 light-green lighten-3</div>
+                                                <div class="light-green lighten-2">#aed581 light-green lighten-2</div>
+                                                <div class="light-green lighten-1">#9ccc65 light-green lighten-1</div>
+                                                <div class="light-green">#8bc34a light-green</div>
+                                                <div class="light-green darken-1" style="color: rgba(255, 255, 255, 0.901961);">#7cb342 light-green darken-1</div>
+                                                <div class="light-green darken-2" style="color: rgba(255, 255, 255, 0.901961);">#689f38 light-green darken-2</div>
+                                                <div class="light-green darken-3" style="color: rgba(255, 255, 255, 0.901961);">#558b2f light-green darken-3</div>
+                                                <div class="light-green darken-4" style="color: rgba(255, 255, 255, 0.901961);">#33691e light-green darken-4</div>
+                                                <div class="light-green accent-1">#ccff90 light-green accent-1</div>
+                                                <div class="light-green accent-2">#b2ff59 light-green accent-2</div>
+                                                <div class="light-green accent-3">#76ff03 light-green accent-3</div>
+                                                <div class="light-green accent-4">#64dd17 light-green accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="lime lighten-5">#f9fbe7 lime lighten-5</div>
+                                                <div class="lime lighten-4">#f0f4c3 lime lighten-4</div>
+                                                <div class="lime lighten-3">#e6ee9c lime lighten-3</div>
+                                                <div class="lime lighten-2">#dce775 lime lighten-2</div>
+                                                <div class="lime lighten-1">#d4e157 lime lighten-1</div>
+                                                <div class="lime">#cddc39 lime</div>
+                                                <div class="lime darken-1" style="color: rgba(255, 255, 255, 0.901961);">#c0ca33 lime darken-1</div>
+                                                <div class="lime darken-2" style="color: rgba(255, 255, 255, 0.901961);">#afb42b lime darken-2</div>
+                                                <div class="lime darken-3" style="color: rgba(255, 255, 255, 0.901961);">#9e9d24 lime darken-3</div>
+                                                <div class="lime darken-4" style="color: rgba(255, 255, 255, 0.901961);">#827717 lime darken-4</div>
+                                                <div class="lime accent-1">#f4ff81 lime accent-1</div>
+                                                <div class="lime accent-2">#eeff41 lime accent-2</div>
+                                                <div class="lime accent-3">#c6ff00 lime accent-3</div>
+                                                <div class="lime accent-4">#aeea00 lime accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="yellow lighten-5">#fffde7 yellow lighten-5</div>
+                                                <div class="yellow lighten-4">#fff9c4 yellow lighten-4</div>
+                                                <div class="yellow lighten-3">#fff59d yellow lighten-3</div>
+                                                <div class="yellow lighten-2">#fff176 yellow lighten-2</div>
+                                                <div class="yellow lighten-1">#ffee58 yellow lighten-1</div>
+                                                <div class="yellow">#ffeb3b yellow</div>
+                                                <div class="yellow darken-1" style="color: rgba(255, 255, 255, 0.901961);">#fdd835 yellow darken-1</div>
+                                                <div class="yellow darken-2" style="color: rgba(255, 255, 255, 0.901961);">#fbc02d yellow darken-2</div>
+                                                <div class="yellow darken-3" style="color: rgba(255, 255, 255, 0.901961);">#f9a825 yellow darken-3</div>
+                                                <div class="yellow darken-4" style="color: rgba(255, 255, 255, 0.901961);">#f57f17 yellow darken-4</div>
+                                                <div class="yellow accent-1">#ffff8d yellow accent-1</div>
+                                                <div class="yellow accent-2">#ffff00 yellow accent-2</div>
+                                                <div class="yellow accent-3">#ffea00 yellow accent-3</div>
+                                                <div class="yellow accent-4">#ffd600 yellow accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="amber lighten-5">#fff8e1 amber lighten-5</div>
+                                                <div class="amber lighten-4">#ffecb3 amber lighten-4</div>
+                                                <div class="amber lighten-3">#ffe082 amber lighten-3</div>
+                                                <div class="amber lighten-2">#ffd54f amber lighten-2</div>
+                                                <div class="amber lighten-1">#ffca28 amber lighten-1</div>
+                                                <div class="amber">#ffc107 amber</div>
+                                                <div class="amber darken-1" style="color: rgba(255, 255, 255, 0.901961);">#ffb300 amber darken-1</div>
+                                                <div class="amber darken-2" style="color: rgba(255, 255, 255, 0.901961);">#ffa000 amber darken-2</div>
+                                                <div class="amber darken-3" style="color: rgba(255, 255, 255, 0.901961);">#ff8f00 amber darken-3</div>
+                                                <div class="amber darken-4" style="color: rgba(255, 255, 255, 0.901961);">#ff6f00 amber darken-4</div>
+                                                <div class="amber accent-1">#ffe57f amber accent-1</div>
+                                                <div class="amber accent-2">#ffd740 amber accent-2</div>
+                                                <div class="amber accent-3">#ffc400 amber accent-3</div>
+                                                <div class="amber accent-4">#ffab00 amber accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="orange lighten-5">#fff3e0 orange lighten-5</div>
+                                                <div class="orange lighten-4">#ffe0b2 orange lighten-4</div>
+                                                <div class="orange lighten-3">#ffcc80 orange lighten-3</div>
+                                                <div class="orange lighten-2">#ffb74d orange lighten-2</div>
+                                                <div class="orange lighten-1">#ffa726 orange lighten-1</div>
+                                                <div class="orange">#ff9800 orange</div>
+                                                <div class="orange darken-1" style="color: rgba(255, 255, 255, 0.901961);">#fb8c00 orange darken-1</div>
+                                                <div class="orange darken-2" style="color: rgba(255, 255, 255, 0.901961);">#f57c00 orange darken-2</div>
+                                                <div class="orange darken-3" style="color: rgba(255, 255, 255, 0.901961);">#ef6c00 orange darken-3</div>
+                                                <div class="orange darken-4" style="color: rgba(255, 255, 255, 0.901961);">#e65100 orange darken-4</div>
+                                                <div class="orange accent-1">#ffd180 orange accent-1</div>
+                                                <div class="orange accent-2">#ffab40 orange accent-2</div>
+                                                <div class="orange accent-3">#ff9100 orange accent-3</div>
+                                                <div class="orange accent-4">#ff6d00 orange accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="deep-orange lighten-5">#fbe9e7 deep-orange lighten-5</div>
+                                                <div class="deep-orange lighten-4">#ffccbc deep-orange lighten-4</div>
+                                                <div class="deep-orange lighten-3">#ffab91 deep-orange lighten-3</div>
+                                                <div class="deep-orange lighten-2">#ff8a65 deep-orange lighten-2</div>
+                                                <div class="deep-orange lighten-1">#ff7043 deep-orange lighten-1</div>
+                                                <div class="deep-orange">#ff5722 deep-orange</div>
+                                                <div class="deep-orange darken-1" style="color: rgba(255, 255, 255, 0.901961);">#f4511e deep-orange darken-1</div>
+                                                <div class="deep-orange darken-2" style="color: rgba(255, 255, 255, 0.901961);">#e64a19 deep-orange darken-2</div>
+                                                <div class="deep-orange darken-3" style="color: rgba(255, 255, 255, 0.901961);">#d84315 deep-orange darken-3</div>
+                                                <div class="deep-orange darken-4" style="color: rgba(255, 255, 255, 0.901961);">#bf360c deep-orange darken-4</div>
+                                                <div class="deep-orange accent-1">#ff9e80 deep-orange accent-1</div>
+                                                <div class="deep-orange accent-2">#ff6e40 deep-orange accent-2</div>
+                                                <div class="deep-orange accent-3">#ff3d00 deep-orange accent-3</div>
+                                                <div class="deep-orange accent-4">#dd2c00 deep-orange accent-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="brown lighten-5">#efebe9 brown lighten-5</div>
+                                                <div class="brown lighten-4">#d7ccc8 brown lighten-4</div>
+                                                <div class="brown lighten-3">#bcaaa4 brown lighten-3</div>
+                                                <div class="brown lighten-2">#a1887f brown lighten-2</div>
+                                                <div class="brown lighten-1">#8d6e63 brown lighten-1</div>
+                                                <div class="brown">#795548 brown</div>
+                                                <div class="brown darken-1" style="color: rgba(255, 255, 255, 0.901961);">#6d4c41 brown darken-1</div>
+                                                <div class="brown darken-2" style="color: rgba(255, 255, 255, 0.901961);">#5d4037 brown darken-2</div>
+                                                <div class="brown darken-3" style="color: rgba(255, 255, 255, 0.901961);">#4e342e brown darken-3</div>
+                                                <div class="brown darken-4" style="color: rgba(255, 255, 255, 0.901961);">#3e2723 brown darken-4</div>
+                                            </div>
+                                            <div class="col s12 m6 l4">
+                                                <div class="grey lighten-5">#fafafa grey lighten-5</div>
+                                                <div class="grey lighten-4">#f5f5f5 grey lighten-4</div>
+                                                <div class="grey lighten-3">#eeeeee grey lighten-3</div>
+                                                <div class="grey lighten-2">#e0e0e0 grey lighten-2</div>
+                                                <div class="grey lighten-1">#bdbdbd grey lighten-1</div>
+                                                <div class="grey">#9e9e9e grey</div>
+                                                <div class="grey darken-1" style="color: rgba(255, 255, 255, 0.901961);">#757575 grey darken-1</div>
+                                                <div class="grey darken-2" style="color: rgba(255, 255, 255, 0.901961);">#616161 grey darken-2</div>
+                                                <div class="grey darken-3" style="color: rgba(255, 255, 255, 0.901961);">#424242 grey darken-3</div>
+                                                <div class="grey darken-4" style="color: rgba(255, 255, 255, 0.901961);">#212121 grey darken-4</div>
+                                            </div>
+
+                                            <div class="col s12 m6 l4">
+                                                <div class="blue-grey lighten-5"><span>#eceff1 blue-grey lighten-5</span></div>
+                                                <div class="blue-grey lighten-4"><span>#cfd8dc blue-grey lighten-4</span></div>
+                                                <div class="blue-grey lighten-3"><span>#b0bec5 blue-grey lighten-3</span></div>
+                                                <div class="blue-grey lighten-2"><span>#90a4ae blue-grey lighten-2</span></div>
+                                                <div class="blue-grey lighten-1"><span>#78909c blue-grey lighten-1</span></div>
+                                                <div class="blue-grey"><span>#607d8b blue-grey</span></div>
+                                                <div class="blue-grey darken-1" style="color: rgba(255, 255, 255, 0.9);"><span>#546e7a blue-grey darken-1</span></div>
+                                                <div class="blue-grey darken-2" style="color: rgba(255, 255, 255, 0.9);"><span>#455a64 blue-grey darken-2</span></div>
+                                                <div class="blue-grey darken-3" style="color: rgba(255, 255, 255, 0.9);"><span>#37474f blue-grey darken-3</span></div>
+                                                <div class="blue-grey darken-4" style="color: rgba(255, 255, 255, 0.9);"><span>#263238 blue-grey darken-4</span></div>
+                                            </div>
+
+                                            <div class="col s12 m6 l4">
+                                                <div class="black" style="color: rgba(255, 255, 255, 0.9);"><span>#000000 black</span></div>
+                                                <div class="white"><span>#ffffff white</span></div>
+                                                <div class="transparent"><span>N/A transparent</span></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Color Palette -->
+
+
+                </div>
+                <!--End Page content -->
+
+            </main>
+            <!--End page body-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Footer-->
+            <footer class="page-footer">
+                <div class="footer-copyright white grey-text">
+                    &copy; 2018 designlayout
+                </div>
+            </footer>
+            <!--End footer-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+        </div>
+        <!-- End Efnify body page wrapper -->
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+    </div>
+
+    <!-- End Efnify body -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!--  Scripts-->
+
+    <!-- Import jquery -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Import materialize js -->
+    <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <!-- Import prismjs (syntex highlighter) -->
+    <script src="../node_modules/prismjs/prism.js"></script>
+    <!-- Import Efnify app js -->
+    <script src="../assets/js/app.js"></script>
+    <!-- Import Efnify search js (Placed in navbar) -->
+    <script src="../assets/js/search.js"></script>
+
+    <!-- Animate css demo script -->
+    <script>
+        $("#animate-select").on('change', function() {
+            $('#add-animate').removeClass().addClass('animated ' + $(this).val());
+        });
+    </script>
+
+    <!--End scripts-->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+</body>
+<!--End body-->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- Mirrored from vuelayout.com/efnify/html/color.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Feb 2019 03:06:51 GMT -->
+</html>
+<!--End HTML-->
+<!-- //////////////////////////////////////////////////////////////////////////// -->

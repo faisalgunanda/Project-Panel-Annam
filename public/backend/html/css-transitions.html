@@ -1,0 +1,649 @@
+<!--Design by designlayout-->
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--Start HTML document-->
+
+<!DOCTYPE html>
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--HTML-->
+<html lang="en">
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--Head-->
+
+
+<!-- Mirrored from vuelayout.com/efnify/html/css-transitions.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Feb 2019 03:06:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Page title-->
+    <title>CSS Transitions - Efnify</title>
+
+    <!--Browser navbar color (#5c6bc0: indigo lighten-1) for mobile-->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#5c6bc0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#5c6bc0">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5c6bc0">
+    <!--Favicon icon-->
+    <link href="../assets/images/favicon.png" type="image/png" rel="icon">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- ================================================
+    CSS
+    ================================================ -->
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css" />
+    <!-- Import prismjs (syntex highlighter) -->
+    <link type="text/css" rel="stylesheet" href="../node_modules/prismjs/themes/prism.css" />
+    <!-- Import Efnify app css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/app.css" />
+    <!-- Import Efnify app helper class css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/helper.css" />
+    <!-- Import Efnify app responsive css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/responsive.css" />
+    <!-- Import Efnify app theme css -->
+    <link type="text/css" rel="stylesheet" href="../assets/css/theme/default.css" />
+
+
+</head>
+<!-- End head-->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+<!--body-->
+
+<body>
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!--Efnify body-->
+    <div class="ui-app">
+
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+        <!--Efnify body page wrapper -->
+        <div class="ui-app__wrapper" id="app-layout-control">
+
+            <!-- ////////////////s//////////////////////////////////////////////////////////// -->
+            <!--prepage loader-->
+            <div id="prepage-loader">
+                <div class="ui-app__prepage-loader spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+            <!-- End prepage loader-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- /////////////////////////////////////////////////////////////////// -->
+            <!--navbar/header-->
+            <div class="navbar-fixed">
+                <nav class="ui-app__wrapper__navbar">
+                    <div class="nav-wrapper">
+
+                        <!-- //////////////////////////////////////////////////////// -->
+                        <!-- navbar left side  -->
+                        <div class="ui-app__wrapper__navbar__leftside--icons">
+
+                            <!-- left sidenav toggle button(show and hide sidenav) -->
+                            <div class="left ui-app__wrapper__navbar__leftside--icons__sidenav--toggle ui-app__wrapper__navbar__leftside--icon__item" data-target="ui-app__left-sidenav-slide-out" id="left-sidenav-toggle">
+                                <i class="material-icons">menu</i>
+                            </div>
+
+                            <!-- Efnify app/brand title -->
+                            <a href="dashboard.html" class="brand-logo ui-app__wrapper__navbar__leftside--icon__item">Efnify</a>
+
+                            <!-- left sidenav toggle button(small and large sidenav) -->
+                            <div class="ui-app__wrapper__navbar__leftside--icons__sidenav-small--toggle hide-on-med-and-down ui-app__wrapper__navbar__leftside--icon__item" id="left-sidenav-small-toggle">
+                                <i class="material-icons">radio_button_checked</i>
+                            </div>
+                        </div>
+                        <!-- End navbar left side  -->
+                        <!-- ///////////////////////////////////////////////////////////////// -->
+
+                        <!--Search box-->
+                        <!-- ////////////////////////////////////////////////////////////// -->
+                        <div class="ui-app__wrapper__navbar__leftside__search hide-on-med-and-down">
+                            <!-- Search form -->
+                            <form action="#">
+                                <div class="input-field">
+                                    <!--Search input-->
+                                    <input id="search" type="search" autocomplete="off" placeholder="Search pages here!">
+                                    <!--End Search input-->
+                                    <!--Search icon-->
+                                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                    <!--End Search icon-->
+
+
+
+                                </div>
+                            </form>
+                            <!-- End Search form -->
+                        </div>
+                        <!--End Search box-->
+                        <!-- ////////////////////////////////////////////////////////////////// -->
+
+                        <!-- ////////////////////////////////////////////////////////////////// -->
+                        <!-- navbar right side  -->
+                        <div class="ui-app__wrapper__navbar__rightside--icons right">
+                            <!-- navbar menu list -->
+                            <ul>
+                                <!-- full menu demo -->
+                                <li class="ui-app__wrapper__navbar__rightside--icons__item hide-on-small-only"><a class="btn btn-depressed dropdown-trigger dropdown-fixed-width" href="#!" data-target="dropdown-full-menu-target"><i class="material-icons white-text right">arrow_drop_down</i> full menu </a></li>
+                                <!-- End full menu demo -->
+                                <!-- refresh/reload page button -->
+                                <li class="ui-app__wrapper__navbar__rightside--icons__item hide-on-small-only" id="app-page-refresh"><i class="material-icons">refresh</i></li>
+
+                                <!-- notification list -->
+                                <li class="ui-app__wrapper__navbar__rightside--icons__item ui-app__wrapper__navbar__rightside--notifications notification-badge" data-target='dropdown-notifications-target' data-notifications="4"><i class="material-icons">notifications</i></li>
+
+
+                                <!-- User profile -->
+                                <li class="ui-app__wrapper__navbar__rightside--users ui-app__wrapper__navbar__rightside--icons__item" data-target="dropdown-user-profile-target">
+                                    M
+                                </li>
+
+                            </ul>
+                            <!-- full menu dropdown structure -->
+                            <div id="dropdown-full-menu-target" class="dropdown-content dropdown-full-width ui-app__wrapper__navbar__rightside--full-menu__dropdown ">
+                                <div class="row p-a-15">
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Material UI</div>
+                                        <ul>
+                                            <li><a href="#!">Buttons</a></li>
+                                            <li><a href="#!">Badges</a></li>
+                                            <li><a href="#!">Breadcrumbs</a></li>
+                                            <li><a href="#!">Collections</a></li>
+                                            <li><a href="#!">Collapsibles</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">CSS</div>
+                                        <ul>
+                                            <li><a href="#!">Typography</a></li>
+                                            <li><a href="#!">Icons</a></li>
+                                            <li><a href="#!">Animations</a></li>
+                                            <li><a href="#!">Shadow</a></li>
+                                            <li><a href="#!">Media</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Advanced UI</div>
+                                        <ul>
+                                            <li><a href="#!">Carousel</a></li>
+                                            <li><a href="#!">Range Slider</a></li>
+                                            <li><a href="#!">SweetAlert</a></li>
+                                            <li><a href="#!">Highlight</a></li>
+                                            <li><a href="#!">Cards</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Forms</div>
+                                        <ul>
+                                            <li><a href="#!">Form Layouts</a></li>
+                                            <li><a href="#!">Form Validations</a></li>
+                                            <li><a href="#!">Form Masks</a></li>
+                                            <li><a href="#!">Text Editor</a></li>
+                                            <li><a href="#!">Form Elements</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Home</div>
+                                        <ul>
+                                            <li><a href="#!">Signup</a></li>
+                                            <li><a href="#!">Change Password</a></li>
+                                            <li><a href="#!">Contactus</a></li>
+                                            <li><a href="#!">Blank Page</a></li>
+                                            <li><a href="#!">Reset</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col s6 m3 l2">
+                                        <div class="title">Elements</div>
+                                        <ul>
+                                            <li><a href="#!">Grid</a></li>
+                                            <li><a href="#!">Color</a></li>
+                                            <li><a href="#!">widgets</a></li>
+                                            <li><a href="#!">Helpers</a></li>
+                                            <li><a href="#!">Search Page</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End full menu dropdown structure -->
+
+                            <!-- User profile dropdown structure -->
+                            <div id="dropdown-user-profile-target" class="ui-app__wrapper__navbar__rightside--users__dropdown dropdown-content">
+                                <ul>
+                                    <li><a href="#!"><i class="material-icons">perm_identity</i>My Profile</a></li>
+                                    <li><a href="javascript:void(0)" class="toggle-right-sidenav"><i class="material-icons">settings</i>Page Customizer</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="lock.html"><i class="material-icons">lock</i>Lock</a></li>
+                                    <li><a href="signup.html"><i class="material-icons">power_settings_new</i>Logout</a></li>
+                                </ul>
+                            </div>
+                            <!-- End user profile dropdown structure -->
+                            <!-- Notifications dropdown structure -->
+                            <div id="dropdown-notifications-target" class="ui-app__wrapper__navbar__rightside--notifications__dropdown dropdown-content">
+                                <ul class="collection">
+                                    <li class="collection-item avatar"> <img src="../assets/images/user1.jpg" alt="user profile picture" class="circle"> <span class="title">Brunch this weekend?</span>
+                                        <p>Ali Connors <span class="body-1">&mdash; I'll be in your neighborhood doing errands this weekend.</span></p>
+                                    </li>
+                                    <li class="collection-item avatar"> <img src="../assets/images/user2.jpg" alt="user profile picture" class="circle"> <span class="title">Oui oui</span>
+                                        <p>Sandra Adams <span class="body-1">&mdash; Do you have Paris recommendations? Have you ever been?</span></p>
+                                    </li>
+                                    <li class="collection-item avatar"> <img src="../assets/images/user3.jpg" alt="user profile picture" class="circle"> <span class="title">Birthday gift</span>
+                                        <p>Trevor Hansen <span class="body-1">&mdash; Have any ideas about what we should get Heidi for her birthday?</span></p>
+                                    </li>
+                                    <li class="collection-item avatar"> <img src="../assets/images/user4.jpg" alt="user profile picture" class="circle"> <span class="title">Recipe to try</span>
+                                        <p>Britta Holt <span class="body-1">&mdash; We should eat this: Grate, Squash, Corn, and tomatillo Tacos.</span></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End notifications dropdown structure -->
+
+                        </div>
+                        <!-- End navbar left side  -->
+                        <!-- ////////////////////////////////////////////////////////// -->
+                    </div>
+
+                </nav>
+            </div>
+            <!--End navbar/header-->
+            <!-- //////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Left sidenav/sidebar-->
+            <aside class="ui-app__left-sidenav sidenav sidenav-fixed" id="ui-app__left-sidenav-slide-out">
+
+                <!-- sidenav menu list -->
+                <ul class="no-margin">
+                    <!-- dashboard menu -->
+                    <li>
+                        <a href="dashboard.html" class="waves-effect waves-light btn btn-rounded btn-dashboard"><i class="material-icons left">dashboard</i>Dashboard</a>
+                    </li>
+                    <!--end  dashboard menu -->
+
+                    <!-- sidenav main menu list -->
+                    <li>
+                        <ul class="ui-app__left-sidenav__menu collapsible collapsible-accordion ui-app__scrollbar">
+                            <li>
+
+                                <a class="collapsible-header waves-effect waves-default"><i class="material-icons left">build</i>Material UI<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="button.html" class="waves-effect waves-default">Button</a></li>
+                                        <li><a href="floating-action-button.html" class="waves-effect waves-default">Floating Action Button</a></li>
+                                        <li><a href="breadcrumbs.html" class="waves-effect waves-default">Breadcrumbs</a></li>
+                                        <li><a href="collections.html" class="waves-effect waves-default">Collections</a></li>
+                                        <li><a href="collapsibles.html" class="waves-effect waves-default">Collapsibles</a></li>
+                                        <li><a href="dropdown.html" class="waves-effect waves-default">Dropdown</a></li>
+                                        <li><a href="tabs.html" class="waves-effect waves-default">Tabs</a></li>
+                                        <li><a href="pagination.html" class="waves-effect waves-default">Pagination</a></li>
+                                        <li><a href="preloader.html" class="waves-effect waves-default">Preloader</a></li>
+                                        <li><a href="toasts.html" class="waves-effect waves-default">Toasts</a></li>
+                                        <li><a href="tooltip.html" class="waves-effect waves-default">Tooltip</a></li>
+                                        <li><a href="waves.html" class="waves-effect waves-default">Waves</a></li>
+                                        <li><a href="typography.html" class="waves-effect waves-default">Typography</a></li>
+                                        <li><a href="icons.html" class="waves-effect waves-default">Icons</a></li>
+                                        <li><a href="animations.html" class="waves-effect waves-default">Animations</a></li>
+                                        <li><a href="shadow.html" class="waves-effect waves-default">Shadow</a></li>
+                                        <li><a href="media.html" class="waves-effect waves-default">Media</a></li>
+                                        <li><a href="css-transitions.html" class="waves-effect waves-default">CSS Transitions</a></li>
+                                        <li><a href="pulse.html" class="waves-effect waves-default">Pulse</a></li>
+                                        <li><a href="feature-discovery.html" class="waves-effect waves-default">FeatureDiscovery</a></li>
+                                        <li><a href="media-js.html" class="waves-effect waves-default">Media JavaScript</a></li>
+                                        <li><a href="cards.html" class="waves-effect waves-default">Cards</a></li>
+                                        <li><a href="carousel.html" class="waves-effect waves-default">Carousel</a></li>
+                                        <li><a href="modals.html" class="waves-effect waves-default">Modals</a></li>
+                                        <li><a href="range-slider.html" class="waves-effect waves-default">Range Slider</a></li>
+                                        <li><a href="sweetalert.html" class="waves-effect waves-default">SweetAlert</a></li>
+                                        <li><a href="highlight.html" class="waves-effect waves-default">Highlight</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">insert_chart</i>Charts<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+
+
+                                        <li><a href="chartjs-charts.html" class="waves-effect waves-default">ChartJS</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">message</i>Forms<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+
+                                        <li><a href="autocomplete.html" class="waves-effect waves-default">Autocomplete</a></li>
+                                        <li><a href="checkboxes.html" class="waves-effect waves-default">Checkboxes</a></li>
+                                        <li><a href="chips.html" class="waves-effect waves-default">Chips</a></li>
+                                        <li><a href="pickers.html" class="waves-effect waves-default">Pickers</a></li>
+                                        <li><a href="radio-buttons.html" class="waves-effect waves-default">Radio Buttons</a></li>
+                                        <li><a href="range.html" class="waves-effect waves-default">Range</a></li>
+                                        <li><a href="select.html" class="waves-effect waves-default">Select</a></li>
+                                        <li><a href="switches.html" class="waves-effect waves-default">Switches</a></li>
+                                        <li><a href="text-inputs.html" class="waves-effect waves-default">Text Inputs</a></li>
+                                        <li><a href="form-layouts.html" class="waves-effect waves-default">Form Layouts</a></li>
+
+
+                                        <li><a href="text-editor.html" class="waves-effect waves-default">Text Editor</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">border_all</i>Tables<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="basic-table.html" class="waves-effect waves-default">Basic Tables</a></li>
+                                        <li><a href="data-table.html" class="waves-effect waves-default">Data Tables</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="collapsible-header"><i class="material-icons left">terrain</i>Pages<i class="material-icons right">arrow_drop_down</i></a>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <li><a href="login.html" class="waves-effect waves-default">Login</a></li>
+                                        <li><a href="signup.html" class="waves-effect waves-default">Signup</a></li>
+                                        <li><a href="reset.html" class="waves-effect waves-default">Reset</a></li>
+                                        <li><a href="lock.html" class="waves-effect waves-default">Lock</a></li>
+                                        <li><a href="change-password.html" class="waves-effect waves-default">Change Password</a></li>
+                                        <li><a href="contactus.html" class="waves-effect waves-default">Contactus</a></li>
+                                        <li><a href="blank.html" class="waves-effect waves-default">Blank Page</a></li>
+
+
+                                        <li><a href="404.html" class="waves-effect waves-default">404</a></li>
+                                        <li><a href="500.html" class="waves-effect waves-default">500</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="no-menu-list">
+                                <a href="grid.html" class="collapsible-header"><i class="material-icons left">grid_on</i>Grid</a>
+                                <div class="collapsible-body">
+                                </div>
+                            </li>
+
+                            <li class="no-menu-list">
+                                <a href="color.html" class="collapsible-header"><i class="material-icons left">format_color_fill</i>Color</a>
+                                <div class="collapsible-body">
+                                </div>
+                            </li>
+
+                            <li class="no-menu-list">
+                                <a href="helpers.html" class="collapsible-header"><i class="material-icons left">live_help</i>Helper class</a>
+                                <div class="collapsible-body">
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                    <!--end sidenav main menu list -->
+
+                    <!-- sidenav quick/sub main menu list -->
+                    <li class="ui-app__left-sidenav__collapsible-quick-menu-name">
+                        Quick Link
+                    </li>
+                    <li>
+                        <ul class="ui-app__left-sidenav__collapsible-quick-menu ui-app__scrollbar">
+                            <li><a href="#!"><i class="material-icons">help</i>Help</a></li>
+                            <li><a href="#!"><i class="material-icons">phone</i>Contact Support</a></li>
+                            <li><a href="#!"><i class="material-icons">email</i>Email Support</a></li>
+                            <li><a href="#!"><i class="material-icons">code</i>API Documentation</a></li>
+                        </ul>
+                    </li>
+                    <!-- end sidenav quick/sub main menu list -->
+                </ul>
+                <!-- end sidenav menu list -->
+            </aside>
+            <!--End Left sidenav/sidebar-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Right sidenav/sidebar-->
+            <aside class="ui-app__right-sidenav sidenav ui-app__scrollbar" id="ui-app__right-sidenav-slide-out">
+
+                <!-- Layout options -->
+                <ul class="ui-app__right-sidenav__layout">
+                    <li>
+                        <h6 class="settings-content-title">Layout Options</h6>
+                    </li>
+                    <li>
+                        <label>
+                            <input class="with-gap" name="layout" type="radio" value="fixed-header-sidenav" checked />
+                            <span>Fixed Header and sidenav(Default)</span>
+                        </label>
+                    </li>
+
+                    <li>
+                        <label>
+                            <input class="with-gap" name="layout" type="radio" value="fixed-header-unfixed-sidenav"/>
+                            <span>Fixed Header Unfixed sidenav</span>
+                        </label>
+                    </li>
+
+
+                    <li>
+                        <label>
+                            <input class="with-gap" name="layout" type="radio" value="unfixed-header-sidenav"/>
+                            <span>Unfixed Header and sidenav</span>
+                        </label>
+                    </li>
+                </ul>
+                <!-- End Layout options -->
+
+                <!-- color options -->
+                <ul class="ui-app__right-sidenav__layout">
+                    <li>
+                        <h6 class="settings-content-title">Color Options</h6>
+                    </li>
+                    <li>
+                        <div class="ui-app__right-sidenav__layout__color-body active" data-color="default">
+                            <div class="ui-app__right-sidenav__layout__color-body__header indigo">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="pink">
+                            <div class="ui-app__right-sidenav__layout__color-body__header pink">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="purple">
+                            <div class="ui-app__right-sidenav__layout__color-body__header purple">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="blue">
+                            <div class="ui-app__right-sidenav__layout__color-body__header blue">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="cyan">
+                            <div class="ui-app__right-sidenav__layout__color-body__header cyan">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+                        <div class="ui-app__right-sidenav__layout__color-body" data-color="teal">
+                            <div class="ui-app__right-sidenav__layout__color-body__header teal">
+                            </div>
+                            <div class="ui-app__right-sidenav__layout__color-body__sidebar">
+                            </div>
+                        </div>
+
+
+
+                </ul>
+                <!--end  color options -->
+            </aside>
+
+            <!-- Right sidenav toggle (show and hide right sidenav on click button) -->
+            <a href="#" data-target="ui-app__right-sidenav-slide-out" class="ui-app__right-sidenav-toggle sidenav-trigger btn-floating waves-effect waves-light" id="right-sidenav-toggle"><i class="material-icons ">settings</i></a>
+
+            <!--End Right sidenav/sidebar-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Page Body-->
+            <main>
+                <!-- Page heading -->
+                <div class="row ui-app__row">
+                    <div class="col s12 ui-app__header">
+                        <!-- title -->
+                        <h1 class="ui-app__header__title display-1">CSS Transitions</h1>
+                        <!-- bookmark -->
+                        <a href="https://materializecss.com/css-transitions.html" target="_blank" class="ui-app__header__bookmark"><i class="material-icons">bookmark</i></a>
+                        <!-- sub heading -->
+                        <p class="ui-app__header__body subheading">We've made some custom animation classes that will transition your content with only CSS. Each CSS transition consists of a base class that applies the necessary styles and additional classes that control the state of the transition.</p>
+
+                    </div>
+                </div>
+                <!-- End page heading -->
+
+                <!-- Page content -->
+                <div class="row">
+                    <!-- Scale -->
+                    <div class="col s12">
+                        <div class="card ui-app__page-content">
+                            <div class="card-content">
+                                <div class="card-title headline">Scale</div>
+
+                                <div class="card-body">
+                                    <p>Use this scale in and out elements. Make sure to add the base transition class <code class="default">scale-transition</code>. Then add the class <code class="default">scale-out</code> to scale the element down until
+                                        it is hidden. To start something as hidden, add the class <code class="default">scale-out</code> first, and then add the class <code class="default">scale-in</code> to scale the element up until it is shown.</p>
+
+
+                                    <div class="row">
+                                        <div class="col s12 m9">
+                                            <!-- Scaled in -->
+                                            <a id="scale-demo" href="#!" class="btn-floating btn-large scale-transition">
+                                                <i class="material-icons">add</i>
+                                            </a>
+
+                                            <!-- scaled trigger -->
+                                            <a id="scale-demo-trigger" href="#!" class="btn right waves-effect waves-light">Toggle Scale</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="tabs ">
+                                                <li class="tab"><a href="#demo1-html">HTML</a></li>
+
+                                            </ul>
+
+                                            <div id="demo1-html">
+                                                <pre>
+                                                    <code class="language-html">
+&lt;!-- Scaled in --&gt;
+&lt;a id=&quot;scale-demo&quot; href=&quot;#!&quot; class=&quot;btn-floating btn-large scale-transition&quot;&gt;
+    &lt;i class=&quot;material-icons&quot;&gt;add&lt;/i&gt;
+&lt;/a&gt;
+
+&lt;!-- Scaled out --&gt;
+&lt;a id=&quot;scale-demo&quot; href=&quot;#!&quot; class=&quot;btn-floating btn-large scale-transition scale-out&quot;&gt;
+    &lt;i class=&quot;material-icons&quot;&gt;add&lt;/i&gt;
+&lt;/a&gt;
+                                                    </code>
+                                                </pre>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Scale -->
+
+
+                </div>
+                <!--End Page content -->
+
+            </main>
+            <!--End page body-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+            <!--Footer-->
+            <footer class="page-footer">
+                <div class="footer-copyright white grey-text">
+                    &copy; 2018 designlayout
+                </div>
+            </footer>
+            <!--End footer-->
+            <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+        </div>
+        <!-- End Efnify body page wrapper -->
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
+    </div>
+
+    <!-- End Efnify body -->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+    <!--  Scripts-->
+
+    <!-- Import jquery -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Import materialize js -->
+    <script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <!-- Import prismjs (syntex highlighter) -->
+    <script src="../node_modules/prismjs/prism.js"></script>
+    <!-- Import Efnify app js -->
+    <script src="../assets/js/app.js"></script>
+    <!-- Import Efnify search js (Placed in navbar) -->
+    <script src="../assets/js/search.js"></script>
+
+    <!-- CSS Transitions  script (use for only demo purpose)-->
+    <script>
+        $('#scale-demo-trigger').on('click', function() {
+            $('#scale-demo').toggleClass('scale-out');
+        });
+    </script>
+
+    <!--End scripts-->
+    <!-- //////////////////////////////////////////////////////////////////////////// -->
+</body>
+<!--End body-->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- Mirrored from vuelayout.com/efnify/html/css-transitions.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Feb 2019 03:06:20 GMT -->
+</html>
+<!--End HTML-->
+<!-- //////////////////////////////////////////////////////////////////////////// -->
